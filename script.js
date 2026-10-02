@@ -56,6 +56,28 @@ const sections = {
     ]
   },
 
+    mashrooms: {
+    title: "Грибы",
+    subtitle: "Соедини название со знаком",
+    description: "12 знаков • 3 страницы",
+    pairs: [
+      ["stop", "Груздь", "images/signs/stop.jpg"],
+      ["yield", "Белый гриб", "images/signs/yield.jpg"],
+      ["noentry", "Вешенка", "images/signs/noentry.jpg"],
+      ["crosswalk", "Опёнок", "images/signs/crosswalk.jpg"],
+
+      ["speed50", "Мухомор", "images/signs/speed50.jpg"],
+      ["noparking", "Сморчок", "images/signs/noparking.jpg"],
+      ["roundabout", "Шампиньон", "images/signs/roundabout.jpg"],
+      ["oneway", "Лисичка", "images/signs/oneway.jpg"],
+
+      ["mainroad", "Волнушка", "images/signs/mainroad.jpg"],
+      ["deadend", "Рыжик", "images/signs/deadend.jpg"],
+      ["bike", "Маслёнок", "images/signs/bike.jpg"],
+      ["school", "Строчок", "images/signs/school.jpg"]
+    ]
+  },
+  
   flowers: {
     title: "Цветы",
     subtitle: "Соедини название с изображением цветка",
