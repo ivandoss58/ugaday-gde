@@ -41,20 +41,20 @@ const sections = {
     icon: "🚦",
     description: "12 знаков • 3 страницы",
     pairs: [
-      ["stop", "Стоп", "🛑", "images/signs/stop.jpg"],
-      ["yield", "Уступи дорогу", "⚠️", "images/signs/yield.jpg"],
-      ["noentry", "Въезд запрещён", "⛔", "images/signs/noentry.jpg"],
-      ["crosswalk", "Пешеходный переход", "🚸", "images/signs/crosswalk.jpg"],
+      ["stop", "Стоп", "images/signs/stop.jpg"],
+      ["yield", "Уступи дорогу", "images/signs/yield.jpg"],
+      ["noentry", "Въезд запрещён", "images/signs/noentry.jpg"],
+      ["crosswalk", "Пешеходный переход", "images/signs/crosswalk.jpg"],
 
-      ["speed50", "Ограничение 50", "🔴", "images/signs/speed50.jpg"],
-      ["noparking", "Стоянка запрещена", "🚫", "images/signs/noparking.jpg"],
-      ["roundabout", "Круговое движение", "🔄", "images/signs/roundabout.jpg"],
-      ["oneway", "Одностороннее движение", "➡️", "images/signs/oneway.jpg"],
+      ["speed50", "Ограничение 50", "images/signs/speed50.jpg"],
+      ["noparking", "Стоянка запрещена", "images/signs/noparking.jpg"],
+      ["roundabout", "Круговое движение", "images/signs/roundabout.jpg"],
+      ["oneway", "Одностороннее движение", "images/signs/oneway.jpg"],
 
-      ["mainroad", "Главная дорога", "🔶", "images/signs/mainroad.jpg"],
-      ["deadend", "Тупик", "🚧", "images/signs/deadend.jpg"],
-      ["bike", "Велосипедная дорожка", "🚲", "images/signs/bike.jpg"],
-      ["school", "Дети", "⚠️", "images/signs/school.jpg"]
+      ["mainroad", "Главная дорога", "images/signs/mainroad.jpg"],
+      ["deadend", "Тупик", "images/signs/deadend.jpg"],
+      ["bike", "Велосипедная дорожка", "images/signs/bike.jpg"],
+      ["school", "Дети", "images/signs/school.jpg"]
     ]
   },
 
