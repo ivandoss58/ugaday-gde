@@ -61,20 +61,20 @@ const sections = {
     subtitle: "Соедини название со знаком",
     description: "12 знаков • 3 страницы",
     pairs: [
-      ["stop", "Груздь", "images/signs/stop.jpg"],
-      ["yield", "Белый гриб", "images/signs/yield.jpg"],
-      ["noentry", "Вешенка", "images/signs/noentry.jpg"],
-      ["crosswalk", "Опёнок", "images/signs/crosswalk.jpg"],
+      ["stop", "Груздь", "images/mashrooms/Груздь.jpg"],
+      ["yield", "Белый гриб", "images/mashrooms/Белый гриб.jpg"],
+      ["noentry", "Вешенка", "images/mashrooms/Вешенка.jpg"],
+      ["crosswalk", "Опёнок", "images/mashrooms/Опёнок.jpg"],
 
-      ["speed50", "Мухомор", "images/signs/speed50.jpg"],
-      ["noparking", "Сморчок", "images/signs/noparking.jpg"],
-      ["roundabout", "Шампиньон", "images/signs/roundabout.jpg"],
-      ["oneway", "Лисичка", "images/signs/oneway.jpg"],
+      ["speed50", "Мухомор", "images/mashrooms/Мухомор.jpg"],
+      ["noparking", "Сморчок", "images/mashrooms/Сморчок.jpg"],
+      ["roundabout", "Шампиньон", "images/mashrooms/Шампиньон.jpg"],
+      ["oneway", "Лисичка", "images/mashrooms/Лисичка.jpg"],
 
-      ["mainroad", "Волнушка", "images/signs/mainroad.jpg"],
-      ["deadend", "Рыжик", "images/signs/deadend.jpg"],
-      ["bike", "Маслёнок", "images/signs/bike.jpg"],
-      ["school", "Строчок", "images/signs/school.jpg"]
+      ["mainroad", "Волнушка", "images/mashrooms/Волнушка.jpg"],
+      ["deadend", "Рыжик", "images/mashrooms/Рыжик.jpg"],
+      ["bike", "Маслёнок", "images/mashrooms/Маслёнок.jpg"],
+      ["school", "Строчок", "images/mashrooms/Строчок.jpg"]
     ]
   },
   
