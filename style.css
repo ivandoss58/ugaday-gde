@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 :root {
   --green: #20c96b;
@@ -10,7 +12,8 @@
   --bg: #f7f9fc;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -20,7 +23,10 @@ html, body {
   color: var(--text);
 }
 
-body { display: flex; justify-content: center; }
+body {
+  display: flex;
+  justify-content: center;
+}
 
 .app {
   width: min(100%, 520px);
@@ -78,29 +84,42 @@ body { display: flex; justify-content: center; }
   font-size: 23px;
 }
 
-.lives b { font-size: 20px; }
+.lives b {
+  font-size: 20px;
+}
 
-.screen { flex: 1 1 auto; min-height: 0; }
-.hidden { display: none !important; }
+.screen {
+  flex: 1 1 auto;
+  min-height: 0;
+}
 
-.intro { margin: 12px 0 14px; }
+.hidden {
+  display: none !important;
+}
+
+/* Главное меню разделов */
+
+.menu-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  margin: 12px 0 14px;
+}
+
 .intro h1 {
   margin: 0 0 5px;
   font-size: clamp(29px, 7.5vw, 42px);
   line-height: 1.05;
   letter-spacing: -1.2px;
 }
+
 .intro p {
   margin: 0;
   color: var(--muted);
   font-size: clamp(14px, 4vw, 17px);
   line-height: 1.25;
-}
-.eyebrow {
-  color: var(--green);
-  font-weight: 800;
-  font-size: 14px;
-  margin-bottom: 5px;
 }
 
 .sections {
@@ -115,7 +134,7 @@ body { display: flex; justify-content: center; }
   border: 0;
   border-radius: 20px;
   background: white;
-  box-shadow: 0 3px 12px rgba(35,49,66,.08);
+  box-shadow: 0 3px 12px rgba(35, 49, 66, .08);
   padding: 16px;
   display: flex;
   align-items: center;
@@ -124,6 +143,7 @@ body { display: flex; justify-content: center; }
   cursor: pointer;
   color: var(--text);
 }
+
 .section-icon {
   width: 60px;
   height: 60px;
@@ -134,15 +154,21 @@ body { display: flex; justify-content: center; }
   font-size: 34px;
   flex: 0 0 auto;
 }
+
 .section-title {
+  display: block;
   font-size: 21px;
   font-weight: 800;
 }
+
 .section-subtitle {
+  display: block;
   margin-top: 3px;
   color: var(--muted);
   font-size: 14px;
 }
+
+/* Игра */
 
 .game-screen {
   display: flex;
@@ -150,7 +176,16 @@ body { display: flex; justify-content: center; }
   min-height: 0;
 }
 
-.game-screen .intro { flex: 0 0 auto; }
+.game-screen .intro {
+  flex: 0 0 auto;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
 
 .game-board {
   display: grid;
@@ -175,7 +210,7 @@ body { display: flex; justify-content: center; }
   border: 3px solid transparent;
   border-radius: 18px;
   background: #fff;
-  box-shadow: 0 2px 9px rgba(35,49,66,.06);
+  box-shadow: 0 2px 9px rgba(35, 49, 66, .06);
   transition: border-color .15s ease, background .15s ease, transform .15s ease;
   cursor: pointer;
   user-select: none;
@@ -189,6 +224,7 @@ body { display: flex; justify-content: center; }
   align-items: center;
   gap: 8px;
 }
+
 .flag {
   width: clamp(28px, 8vw, 42px);
   height: auto;
@@ -197,34 +233,45 @@ body { display: flex; justify-content: center; }
   object-fit: cover;
   flex: 0 0 auto;
 }
+
 .name {
   font-size: clamp(13px, 3.8vw, 20px);
   font-weight: 700;
   line-height: 1.08;
 }
-.image-card { padding: 5px; }
-.picture {
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
+
+.image-card {
+  padding: 5px;
 }
-.picture svg {
+
+.image-card img {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.card.selected { border-color: #91a0b1; transform: translateY(-1px); }
-.card.correct { border-color: var(--green); background: var(--green-soft); }
+.card.selected {
+  border-color: #91a0b1;
+  transform: translateY(-1px);
+}
+
+.card.correct {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
 .card.wrong {
   border-color: var(--red);
   background: var(--red-soft);
   animation: shake .22s linear 0s 2;
 }
-.card.locked { cursor: default; opacity: .72; }
+
+.card.locked {
+  cursor: default;
+  opacity: .72;
+}
 
 .check {
   position: absolute;
@@ -256,7 +303,11 @@ body { display: flex; justify-content: center; }
   cursor: pointer;
   transition: .2s ease;
 }
-.next-btn:not(:disabled) { background: var(--green); color: white; }
+
+.next-btn:not(:disabled) {
+  background: var(--green);
+  color: white;
+}
 
 .status {
   min-height: 0;
@@ -269,26 +320,86 @@ body { display: flex; justify-content: center; }
 }
 
 @keyframes shake {
-  0%,100% { transform: translateX(0); }
+  0%, 100% { transform: translateX(0); }
   25% { transform: translateX(-4px); }
   75% { transform: translateX(4px); }
 }
 
 @media (max-height: 700px) {
-  .app { padding-left: 12px; padding-right: 12px; }
-  .topbar { height: 38px; flex-basis: 38px; }
-  .close-btn { width: 34px; height: 34px; font-size: 36px; }
-  .progress { height: 11px; }
-  .lives { font-size: 20px; }
-  .lives b { font-size: 18px; }
-  .intro { margin: 7px 0 9px; }
-  .intro h1 { font-size: 28px; margin-bottom: 2px; }
-  .intro p { font-size: 13px; }
-  .game-board, .column { gap: 7px; }
-  .next-btn { height: 42px; flex-basis: 42px; margin-top: 7px; font-size: 16px; }
-  .sections { margin-top: 15px; gap: 8px; }
-  .section-btn { min-height: 76px; padding: 11px; }
-  .section-icon { width: 48px; height: 48px; font-size: 27px; }
-  .section-title { font-size: 18px; }
-  .section-subtitle { font-size: 12px; }
+  .app {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .topbar {
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .close-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 36px;
+  }
+
+  .progress {
+    height: 11px;
+  }
+
+  .lives {
+    font-size: 20px;
+  }
+
+  .lives b {
+    font-size: 18px;
+  }
+
+  .intro {
+    margin: 7px 0 9px;
+  }
+
+  .intro h1 {
+    font-size: 28px;
+    margin-bottom: 2px;
+  }
+
+  .intro p {
+    font-size: 13px;
+  }
+
+  .game-board,
+  .column {
+    gap: 7px;
+  }
+
+  .next-btn {
+    height: 42px;
+    flex-basis: 42px;
+    margin-top: 7px;
+    font-size: 16px;
+  }
+
+  .sections {
+    margin-top: 15px;
+    gap: 8px;
+  }
+
+  .section-btn {
+    min-height: 76px;
+    padding: 11px;
+  }
+
+  .section-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 27px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .section-subtitle {
+    font-size: 12px;
+  }
 }
