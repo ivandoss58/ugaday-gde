@@ -8,35 +8,46 @@
 </head>
 <body>
   <main class="app">
+
+    <!-- Верхняя панель -->
     <header class="topbar">
       <button class="close-btn" id="backBtn" aria-label="Назад">×</button>
-      <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
-      <div class="lives" aria-label="Жизни"><span>♥</span><b id="lives">3</b></div>
+      <div class="progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="lives">
+        <span>♥</span>
+        <b id="lives">3</b>
+      </div>
     </header>
 
+    <!-- Страница выбора раздела -->
     <section id="menuScreen" class="screen menu-screen">
       <div class="intro">
         <h1>Угадай где</h1>
-        <p>Выбери раздел и найди все пары.</p>
+        <p>Выбери раздел</p>
       </div>
+
       <div class="sections" id="sections"></div>
     </section>
 
+    <!-- Игровая страница -->
     <section id="gameScreen" class="screen game-screen hidden">
-      <section class="intro">
+      <div class="intro">
         <div class="eyebrow" id="pageLabel"></div>
         <h1 id="gameTitle">Найди пару</h1>
         <p id="gameSubtitle"></p>
-      </section>
+      </div>
 
-      <section class="game-board" id="gameBoard" aria-label="Игровое поле">
-        <div class="column names" id="namesColumn"></div>
-        <div class="column pictures" id="picturesColumn"></div>
+      <section class="game-board">
+        <div class="column" id="namesColumn"></div>
+        <div class="column" id="picturesColumn"></div>
       </section>
 
       <button class="next-btn" id="nextBtn" disabled>Далее</button>
       <div class="status" id="status" aria-live="polite"></div>
     </section>
+
   </main>
 
   <script src="script.js"></script>
