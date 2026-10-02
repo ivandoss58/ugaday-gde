@@ -333,7 +333,6 @@ nextBtn.addEventListener("click", () => {
 
 /*
   Кнопка X:
-  - на странице выбора разделов — выход из игры;
   - внутри раздела — возврат к выбору разделов.
 */
 backBtn.addEventListener("click", () => {
