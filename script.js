@@ -61,20 +61,20 @@ const sections = {
     subtitle: "Соедини название с изображением",
     description: "12 знаков • 3 страницы",
     pairs: [
-      ["Груздь", "Груздь", "images/mashrooms/Груздь.jpg"],
-      ["Белый гриб", "Белый гриб", "images/mashrooms/Белый гриб.jpg"],
-      ["Вешенка", "Вешенка", "images/mashrooms/Вешенка.jpg"],
-      ["Опёнок", "Опёнок", "images/mashrooms/Опёнок.jpg"],
+      ["gruzd", "Груздь", "images/mashrooms/gruzd.jpg"],
+      ["belygrib", "Белый гриб", "images/mashrooms/belygrib.jpg"],
+      ["veshenka", "Вешенка", "images/mashrooms/veshenka.jpg"],
+      ["opionok", "Опёнок", "images/mashrooms/opionok.jpg"],
 
-      ["Мухомор", "Мухомор", "images/mashrooms/Мухомор.jpg"],
-      ["Сморчок", "Сморчок", "images/mashrooms/Сморчок.jpg"],
-      ["Шампиньон", "Шампиньон", "images/mashrooms/Шампиньон.jpg"],
-      ["Лисичка", "Лисичка", "images/mashrooms/Лисичка.jpg"],
+      ["muhomor", "Мухомор", "images/mashrooms/muhomor.jpg"],
+      ["smorchok", "Сморчок", "images/mashrooms/smorchok.jpg"],
+      ["shampinion", "Шампиньон", "images/mashrooms/shampinion.jpg"],
+      ["lisichka", "Лисичка", "images/mashrooms/lisichka.jpg"],
 
-      ["Волнушка", "Волнушка", "images/mashrooms/Волнушка.jpg"],
-      ["Рыжик", "Рыжик", "images/mashrooms/Рыжик.jpg"],
-      ["Маслёнок", "Маслёнок", "images/mashrooms/Маслёнок.jpg"],
-      ["Строчок", "Строчок", "images/mashrooms/Строчок.jpg"]
+      ["volnushka", "Волнушка", "images/mashrooms/volnushka.jpg"],
+      ["rygik", "Рыжик", "images/mashrooms/rygik.jpg"],
+      ["maslionok", "Маслёнок", "images/mashrooms/maslionok.jpg"],
+      ["strochok", "Строчок", "images/mashrooms/strochok.jpg"]
     ]
   },
   
