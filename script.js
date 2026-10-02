@@ -6,10 +6,10 @@ const pairs = [
     image: "images/paris.svg"
   },
   {
-    id: "tokyo",
-    name: "Токио",
+    id: "tokyo_skytree",
+    name: "Телебашня Tokyo Skytree",
     flag: "🇯🇵",
-    image: "images/tokyo.svg"
+    image: "images/Телебашня Tokyo Skytree.jpg"
   },
   {
     id: "cairo",
