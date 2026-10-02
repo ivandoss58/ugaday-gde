@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<rect width="800" height="600" fill="#74cfff"/><path d="M0 450 Q180 300 360 430 T800 380 V600 H0Z" fill="#3c8c70"/>
+<path d="M390 430 L430 170 L470 430Z" fill="#777"/><circle cx="450" cy="145" r="35" fill="#eee"/>
+<path d="M450 145 L350 110 M450 145 L550 110 M450 145 L450 40 M450 145 L450 250" stroke="#eee" stroke-width="15" stroke-linecap="round"/>
+<path d="M0 500 Q250 430 800 490 V600 H0Z" fill="#3d9bd1"/><text x="40" y="70" font-family="Arial" font-size="42" fill="#fff" font-weight="700">RIO</text>
+</svg>
