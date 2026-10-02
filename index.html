@@ -3,29 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Угадай где — Найди пару</title>
+  <title>Угадай где</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
     <header class="topbar">
-      <button class="close-btn" aria-label="Закрыть">×</button>
+      <button class="close-btn" id="backBtn" aria-label="Назад">×</button>
       <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
       <div class="lives" aria-label="Жизни"><span>♥</span><b id="lives">3</b></div>
     </header>
 
-    <section class="intro">
-      <h1>Найди пару</h1>
-      <p>Соедини название города с его изображением.</p>
+    <section id="menuScreen" class="screen menu-screen">
+      <div class="intro">
+        <h1>Угадай где</h1>
+        <p>Выбери раздел и найди все пары.</p>
+      </div>
+      <div class="sections" id="sections"></div>
     </section>
 
-    <section class="game-board" id="gameBoard" aria-label="Игровое поле">
-      <div class="column names" id="namesColumn"></div>
-      <div class="column pictures" id="picturesColumn"></div>
-    </section>
+    <section id="gameScreen" class="screen game-screen hidden">
+      <section class="intro">
+        <div class="eyebrow" id="pageLabel"></div>
+        <h1 id="gameTitle">Найди пару</h1>
+        <p id="gameSubtitle"></p>
+      </section>
 
-    <button class="next-btn" id="nextBtn" disabled>Далее</button>
-    <div class="status" id="status" aria-live="polite"></div>
+      <section class="game-board" id="gameBoard" aria-label="Игровое поле">
+        <div class="column names" id="namesColumn"></div>
+        <div class="column pictures" id="picturesColumn"></div>
+      </section>
+
+      <button class="next-btn" id="nextBtn" disabled>Далее</button>
+      <div class="status" id="status" aria-live="polite"></div>
+    </section>
   </main>
 
   <script src="script.js"></script>
