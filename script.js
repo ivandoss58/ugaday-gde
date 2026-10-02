@@ -15,7 +15,6 @@ const sections = {
   cities: {
     title: "Города",
     subtitle: "Соедини название города с его изображением",
-    icon: "🏙️",
     description: "12 городов • 3 страницы",
     pairs: [
       ["paris", "Париж", "🇫🇷", "images/cities/paris.jpg"],
@@ -38,7 +37,6 @@ const sections = {
   signs: {
     title: "Дорожные знаки",
     subtitle: "Соедини название со знаком",
-    icon: "🚦",
     description: "12 знаков • 3 страницы",
     pairs: [
       ["stop", "Стоп", "images/signs/stop.jpg"],
@@ -61,7 +59,6 @@ const sections = {
   flowers: {
     title: "Цветы",
     subtitle: "Соедини название с изображением цветка",
-    icon: "🌸",
     description: "12 цветов • 3 страницы",
     pairs: [
       ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
