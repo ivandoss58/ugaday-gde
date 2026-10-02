@@ -66,15 +66,15 @@ const sections = {
       ["Вешенка", "Вешенка", "images/mashrooms/Вешенка.jpg"],
       ["Опёнок", "Опёнок", "images/mashrooms/Опёнок.jpg"],
 
-      ["speed50", "Мухомор", "images/mashrooms/Мухомор.jpg"],
-      ["noparking", "Сморчок", "images/mashrooms/Сморчок.jpg"],
-      ["roundabout", "Шампиньон", "images/mashrooms/Шампиньон.jpg"],
-      ["oneway", "Лисичка", "images/mashrooms/Лисичка.jpg"],
+      ["Мухомор", "Мухомор", "images/mashrooms/Мухомор.jpg"],
+      ["Сморчок", "Сморчок", "images/mashrooms/Сморчок.jpg"],
+      ["Шампиньон", "Шампиньон", "images/mashrooms/Шампиньон.jpg"],
+      ["Лисичка", "Лисичка", "images/mashrooms/Лисичка.jpg"],
 
-      ["mainroad", "Волнушка", "images/mashrooms/Волнушка.jpg"],
-      ["deadend", "Рыжик", "images/mashrooms/Рыжик.jpg"],
-      ["bike", "Маслёнок", "images/mashrooms/Маслёнок.jpg"],
-      ["school", "Строчок", "images/mashrooms/Строчок.jpg"]
+      ["Волнушка", "Волнушка", "images/mashrooms/Волнушка.jpg"],
+      ["Рыжик", "Рыжик", "images/mashrooms/Рыжик.jpg"],
+      ["Маслёнок", "Маслёнок", "images/mashrooms/Маслёнок.jpg"],
+      ["Строчок", "Строчок", "images/mashrooms/Строчок.jpg"]
     ]
   },
   
