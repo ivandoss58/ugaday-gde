@@ -82,6 +82,7 @@ const sections = {
   }
 };
 
+const app = document.querySelector(".app");
 const menuScreen = document.getElementById("menuScreen");
 const gameScreen = document.getElementById("gameScreen");
 const sectionsEl = document.getElementById("sections");
@@ -108,6 +109,17 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
+function fitText(elements, minSize = 11) {
+  elements.forEach(el => {
+    el.style.fontSize = "";
+    let size = parseFloat(getComputedStyle(el).fontSize);
+    while ((el.scrollWidth > el.clientWidth || el.scrollHeight > el.clientHeight) && size > minSize) {
+      size -= 0.5;
+      el.style.fontSize = `${size}px`;
+    }
+  });
+}
+
 function renderMenu() {
   sectionsEl.innerHTML = "";
 
@@ -116,7 +128,6 @@ function renderMenu() {
     button.className = "section-btn";
 
     button.innerHTML = `
-      <span class="section-icon">${section.icon}</span>
       <span>
         <span class="section-title">${section.title}</span>
         <span class="section-subtitle">${section.description}</span>
@@ -126,6 +137,8 @@ function renderMenu() {
     button.addEventListener("click", () => startSection(key));
     sectionsEl.appendChild(button);
   });
+
+  requestAnimationFrame(() => fitText([...sectionsEl.querySelectorAll(".section-title")], 13));
 }
 
 function showMenu() {
@@ -134,6 +147,7 @@ function showMenu() {
 
   menuScreen.classList.remove("hidden");
   gameScreen.classList.add("hidden");
+  app.classList.add("menu-active");
 
   progressFill.style.width = "0%";
   backBtn.setAttribute("aria-label", "Выйти из игры");
@@ -146,6 +160,7 @@ function startSection(key) {
 
   menuScreen.classList.add("hidden");
   gameScreen.classList.remove("hidden");
+  app.classList.remove("menu-active");
 
   resetPage();
 }
@@ -187,7 +202,6 @@ function render() {
     card.dataset.id = pair[0];
 
     card.innerHTML = `
-      <span class="flag">${pair[2]}</span>
       <span class="name">${pair[1]}</span>
     `;
 
@@ -216,6 +230,7 @@ function render() {
     picturesColumn.appendChild(card);
   });
 
+  requestAnimationFrame(() => fitText([...namesColumn.querySelectorAll(".name")], 11));
   updateProgress();
 }
 
