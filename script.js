@@ -61,10 +61,10 @@ const sections = {
     subtitle: "Соедини название с изображением",
     description: "12 знаков • 3 страницы",
     pairs: [
-      ["stop", "Груздь", "images/mashrooms/Груздь.jpg"],
-      ["yield", "Белый гриб", "images/mashrooms/Белый гриб.jpg"],
-      ["noentry", "Вешенка", "images/mashrooms/Вешенка.jpg"],
-      ["crosswalk", "Опёнок", "images/mashrooms/Опёнок.jpg"],
+      ["Груздь", "Груздь", "images/mashrooms/Груздь.jpg"],
+      ["Белый гриб", "Белый гриб", "images/mashrooms/Белый гриб.jpg"],
+      ["Вешенка", "Вешенка", "images/mashrooms/Вешенка.jpg"],
+      ["Опёнок", "Опёнок", "images/mashrooms/Опёнок.jpg"],
 
       ["speed50", "Мухомор", "images/mashrooms/Мухомор.jpg"],
       ["noparking", "Сморчок", "images/mashrooms/Сморчок.jpg"],
