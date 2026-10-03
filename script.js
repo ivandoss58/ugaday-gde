@@ -240,7 +240,7 @@ function render() {
     image.loading = "eager";
 
     image.onerror = () => {
-      image.alt = `Изображение не найдено: ${pair[3]}`;
+      image.alt = `Изображение не найдено: ${pair[2]}`;
     };
 
     card.appendChild(image);
