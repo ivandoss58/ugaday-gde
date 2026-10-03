@@ -118,6 +118,7 @@ const backBtn = document.getElementById("backBtn");
 
 let currentSection = null;
 let currentSectionKey = null;
+let selectedPairs = [];
 let pageIndex = 0;
 let selectedName = null;
 let selectedPicture = null;
@@ -125,7 +126,14 @@ let matched = new Set();
 let lives = 3;
 
 function shuffle(array) {
-  return [...array].sort(() => Math.random() - 0.5);
+  const result = [...array];
+
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+
+  return result;
 }
 
 function fitText(elements, minSize = 11) {
@@ -175,6 +183,11 @@ function showMenu() {
 function startSection(key) {
   currentSectionKey = key;
   currentSection = sections[key];
+
+  // При каждом новом запуске раздела случайно выбираем 12 пар
+  // из всего списка. Эти 12 пар сохраняются до конца текущей игры.
+  selectedPairs = shuffle(currentSection.pairs).slice(0, 12);
+
   pageIndex = 0;
 
   menuScreen.classList.add("hidden");
@@ -185,7 +198,7 @@ function startSection(key) {
 }
 
 function currentPairs() {
-  return currentSection.pairs.slice(pageIndex * 4, pageIndex * 4 + 4);
+  return selectedPairs.slice(pageIndex * 4, pageIndex * 4 + 4);
 }
 
 function resetPage() {
@@ -235,12 +248,16 @@ function render() {
     card.dataset.id = pair[0];
 
     const image = document.createElement("img");
-    image.src = pair[2];
+    // Поддерживаем оба формата на время перехода:
+    // [ID, Название, Путь] и старый [ID, Название, Иконка, Путь].
+    const imagePath = pair.length === 3 ? pair[2] : pair[3];
+
+    image.src = imagePath;
     image.alt = pair[1];
     image.loading = "eager";
 
     image.onerror = () => {
-      image.alt = `Изображение не найдено: ${pair[2]}`;
+      image.alt = `Изображение не найдено: ${imagePath}`;
     };
 
     card.appendChild(image);
