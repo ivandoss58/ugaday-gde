@@ -105,7 +105,7 @@ const sections = {
 	  subtitle: "Соедини название с изображением",
 	  description: "12 млекопитающих • 3 страницы",
       pairs: [
-		["gruzd", "Антур", "images/mashrooms/gruzd.jpg"],
+		["Антур", "Антур", "images/sea_animales/Антур.jpeg"],
 		["belygrib", "Белокрылая морская свинья", "images/mashrooms/belygrib.jpg"],
 		["veshenka", "Белуха", "images/mashrooms/veshenka.jpg"],
 		["opionok", "Горбатый кит", "images/mashrooms/opionok.jpg"],
