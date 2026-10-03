@@ -106,14 +106,14 @@ const sections = {
 	  description: "12 млекопитающих • 3 страницы",
       pairs: [
 		["Антур", "Антур", "images/sea_animales/Антур.jpeg"],
-		["belygrib", "Белокрылая морская свинья", "images/mashrooms/belygrib.jpg"],
-		["veshenka", "Белуха", "images/mashrooms/veshenka.jpg"],
-		["opionok", "Горбатый кит", "images/mashrooms/opionok.jpg"],
+		["belygrib", "Белокрылая морская свинья", "images/sea_animales/Белокрылая моская свинья.jpeg"],
+		["veshenka", "Белуха", "images/sea_animales/Белуха.jpeg"],
+		["opionok", "Горбатый кит", "images/sea_animales/Горбатый кит.jpeg"],
   
-		["muhomor", "Дюгонь - морская корова", "images/mashrooms/muhomor.jpg"],
-		["smorchok", "Калан", "images/mashrooms/smorchok.jpg"],
-		["shampinion", "Кашалот", "images/mashrooms/shampinion.jpg"],
-		["lisichka", "Кольчатая нерпа", "images/mashrooms/lisichka.jpg"],
+		["muhomor", "Дюгонь - морская корова", "images/sea_animales/Дюгонь - морская корова.jpeg"],
+		["smorchok", "Калан", "images/sea_animales/Калан.webp"],
+		["shampinion", "Кашалот", "images/sea_animales/Кашалот.jpeg"],
+		["lisichka", "Кольчатая нерпа", "images/sea_animales/Кольчатая нерпа.webp"],
   
 		["volnushka", "Косатка", "images/mashrooms/volnushka.jpg"],
 		["rygik", "Крылатка", "images/mashrooms/rygik.jpg"],
