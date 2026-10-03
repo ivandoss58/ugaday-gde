@@ -88,7 +88,7 @@ const sections = {
     ]
   },
 
-    mashrooms: {
+  mashrooms: {
     title: "Грибы",
     subtitle: "Соедини название с изображением",
     description: "12 грибов • 3 страницы",
