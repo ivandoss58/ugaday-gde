@@ -98,7 +98,39 @@ const sections = {
       ["carnation", "Гвоздика", "🌺", "images/flowers/carnation.jpg"],
       ["chamomile", "Ромашка полевая", "🌼", "images/flowers/chamomile.jpg"]
     ]
-  }
+  },
+
+  seaanimales: {
+	title: "Морские млекопитающие",
+	subtitle: "Соедини название с изображением",
+	description: "12 млекопитающих • 3 страницы",
+    pairs: [
+		["gruzd", "Антур", "images/mashrooms/gruzd.jpg"],
+		["belygrib", "Белокрылая морская свинья", "images/mashrooms/belygrib.jpg"],
+		["veshenka", "Белуха", "images/mashrooms/veshenka.jpg"],
+		["opionok", "Горбатый кит", "images/mashrooms/opionok.jpg"],
+  
+		["muhomor", "Дюгонь - морская корова", "images/mashrooms/muhomor.jpg"],
+		["smorchok", "Калан", "images/mashrooms/smorchok.jpg"],
+		["shampinion", "Кашалот", "images/mashrooms/shampinion.jpg"],
+		["lisichka", "Кольчатая нерпа", "images/mashrooms/lisichka.jpg"],
+  
+		["volnushka", "Косатка", "images/mashrooms/volnushka.jpg"],
+		["rygik", "Крылатка", "images/mashrooms/rygik.jpg"],
+		["maslionok", "Ларга", "images/mashrooms/maslionok.jpg"],
+		["strochok", "Лахтак", "images/mashrooms/strochok.jpg"]
+	
+		["strochok", "Морж", "images/mashrooms/strochok.jpg"]
+		["strochok", "Морской котик", "images/mashrooms/strochok.jpg"]
+		["strochok", "Морской лев", "images/mashrooms/strochok.jpg"]
+		["strochok", "Обыкновенный дельфин", "images/mashrooms/strochok.jpg"]
+	
+		["strochok", "Северный морской котик", "images/mashrooms/strochok.jpg"]
+		["strochok", "Северный финвал", "images/mashrooms/strochok.jpg"]
+		["strochok", "Серый кит", "images/mashrooms/strochok.jpg"]
+		["strochok", "Синий кит", "images/mashrooms/strochok.jpg"]
+    ]
+	}
 };
 
 const app = document.querySelector(".app");
