@@ -59,7 +59,7 @@ const sections = {
     mashrooms: {
     title: "Грибы",
     subtitle: "Соедини название с изображением",
-    description: "12 знаков • 3 страницы",
+    description: "12 грибов • 3 страницы",
     pairs: [
       ["gruzd", "Груздь", "images/mashrooms/gruzd.jpg"],
       ["belygrib", "Белый гриб", "images/mashrooms/belygrib.jpg"],
