@@ -235,7 +235,7 @@ function render() {
     card.dataset.id = pair[0];
 
     const image = document.createElement("img");
-    image.src = pair[3];
+    image.src = pair[2];
     image.alt = pair[1];
     image.loading = "eager";
 
