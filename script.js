@@ -105,20 +105,25 @@ const sections = {
 	  subtitle: "Соедини название с изображением",
 	  description: "12 млекопитающих • 3 страницы",
       pairs: [
-		["Антур", "Антур", "images/sea_animales/Антур.jpeg"],
-		["belygrib", "Белокрылая морская свинья", "images/sea_animales/Белокрылая моская свинья.jpeg"],
-		["veshenka", "Белуха", "images/sea_animales/Белуха.jpeg"],
-		["opionok", "Горбатый кит", "images/sea_animales/Горбатый кит.jpeg"],
+		["antur", "Антур", "images/sea_animales/Антур.jpeg"],
+		["morskayasvinya", "Белокрылая морская свинья", "images/sea_animales/Белокрылая моская свинья.jpeg"],
+		["beluha", "Белуха", "images/sea_animales/Белуха.jpeg"],
+		["gorbatykit", "Горбатый кит", "images/sea_animales/Горбатый кит.jpeg"],
   
-		["muhomor", "Дюгонь - морская корова", "images/sea_animales/Дюгонь - морская корова.jpeg"],
-		["smorchok", "Калан", "images/sea_animales/Калан.webp"],
-		["shampinion", "Кашалот", "images/sea_animales/Кашалот.jpeg"],
-		["lisichka", "Кольчатая нерпа", "images/sea_animales/Кольчатая нерпа.webp"],
+		["dyugon", "Дюгонь - морская корова", "images/sea_animales/Дюгонь - морская корова.jpeg"],
+		["kalan", "Калан", "images/sea_animales/Калан.webp"],
+		["kashalot", "Кашалот", "images/sea_animales/Кашалот.jpeg"],
+		["kolchatayanerpa", "Кольчатая нерпа", "images/sea_animales/Кольчатая нерпа.webp"],
   
-		["volnushka", "Косатка", "images/mashrooms/volnushka.jpg"],
-		["rygik", "Крылатка", "images/mashrooms/rygik.jpg"],
-		["maslionok", "Ларга", "images/mashrooms/maslionok.jpg"],
-		["strochok", "Лахтак", "images/mashrooms/strochok.jpg"]
+		["kosatka", "Косатка", "images/sea_animales/Косатка.jpeg"],
+		["krylatka", "Крылатка", "images/sea_animales/Крылатка.jpeg"],
+		["larga", "Ларга", "images/sea_animales/Ларга.jpeg"],
+		["lahtak", "Лахтак", "images/sea_animales/Лахтак.jpeg"]
+		
+		["morzh", "Морж", "images/sea_animales/Морж.jpeg"]
+		["morskoicotic", "Морской котик", "images/sea_animales/Морской котик.jpeg"]
+		["morskoilev", "Морской лев", "images/sea_animales/Морской лев.jpeg"]
+		["dolphin", "Обыкновенный дельфин", "images/sea_animales/Обыкновенный дельфин.jpeg"]
 	  ]
 	}
 };
