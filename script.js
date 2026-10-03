@@ -34,7 +34,7 @@ const sections = {
     ]
   },
 
-      sea_animales: {
+  sea_animales: {
     title: "Морские млекопитающие",
     subtitle: "Соедини название с изображением",
     description: "12 млекопитающих • 3 страницы",
