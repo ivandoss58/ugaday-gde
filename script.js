@@ -123,7 +123,12 @@ const sections = {
 		["morzh", "Морж", "images/sea_animales/Морж.jpeg"],
 		["morskoicotic", "Морской котик", "images/sea_animales/Морской котик.jpeg"],
 		["morskoilev", "Морской лев", "images/sea_animales/Морской лев.jpeg"],
-		["dolphin", "Обыкновенный дельфин", "images/sea_animales/Обыкновенный дельфин.jpeg"]
+		["dolphin", "Обыкновенный дельфин", "images/sea_animales/Обыкновенный дельфин.jpeg"],
+		  
+		["sevmorskoikotik", "Северный морской котик", "images/sea_animales/Северный морской котик.jpeg"],
+		["phinval", "Северный финвал", "images/sea_animales/Северный финвал.jpeg"],
+		["serykit", "Серый кит", "images/sea_animales/Серый кит.jpeg"],
+		["sinikit", "Синий кит", "images/sea_animales/Синий кит.jpeg"]
 	  ]
 	}
 };
