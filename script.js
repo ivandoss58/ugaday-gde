@@ -118,11 +118,11 @@ const sections = {
 		["kosatka", "Косатка", "images/sea_animales/Косатка.jpeg"],
 		["krylatka", "Крылатка", "images/sea_animales/Крылатка.jpeg"],
 		["larga", "Ларга", "images/sea_animales/Ларга.jpeg"],
-		["lahtak", "Лахтак", "images/sea_animales/Лахтак.jpeg"]
+		["lahtak", "Лахтак", "images/sea_animales/Лахтак.jpeg"],
 		
-		["morzh", "Морж", "images/sea_animales/Морж.jpeg"]
-		["morskoicotic", "Морской котик", "images/sea_animales/Морской котик.jpeg"]
-		["morskoilev", "Морской лев", "images/sea_animales/Морской лев.jpeg"]
+		["morzh", "Морж", "images/sea_animales/Морж.jpeg"],
+		["morskoicotic", "Морской котик", "images/sea_animales/Морской котик.jpeg"],
+		["morskoilev", "Морской лев", "images/sea_animales/Морской лев.jpeg"],
 		["dolphin", "Обыкновенный дельфин", "images/sea_animales/Обыкновенный дельфин.jpeg"]
 	  ]
 	}
