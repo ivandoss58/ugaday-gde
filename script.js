@@ -196,6 +196,8 @@ const sections = {
 };
 
 const app = document.querySelector(".app");
+const startScreen = document.getElementById("startScreen");
+const playBtn = document.getElementById("playBtn");
 const menuScreen = document.getElementById("menuScreen");
 const gameScreen = document.getElementById("gameScreen");
 const sectionsEl = document.getElementById("sections");
@@ -218,6 +220,17 @@ let selectedName = null;
 let selectedPicture = null;
 let matched = new Set();
 let lives = 3;
+
+function showStart() {
+  startScreen.classList.remove("hidden");
+  menuScreen.classList.add("hidden");
+  gameScreen.classList.add("hidden");
+  app.classList.add("menu-active");
+}
+
+playBtn.addEventListener("click", () => {
+  showMenu();
+});
 
 function shuffle(array) {
   const result = [...array];
@@ -484,4 +497,4 @@ backBtn.addEventListener("click", () => {
 });
 
 renderMenu();
-showMenu();
+showStart();
