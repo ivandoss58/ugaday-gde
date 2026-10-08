@@ -211,16 +211,6 @@ button{font:inherit}
 .card.wrong{border-color:var(--red);background:var(--red-soft);animation:shake .22s linear 0s 2}
 .card.locked{cursor:default;opacity:.72}
 
-.check{
-  position:absolute;
-  top:6px;right:6px;
-  width:25px;height:25px;
-  display:grid;place-items:center;
-  border-radius:50%;
-  background:var(--green);
-  color:#fff;font-weight:900;
-}
-
 .next-btn{
   flex:0 0 48px;
   width:100%;
