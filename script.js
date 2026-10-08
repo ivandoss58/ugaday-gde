@@ -36,7 +36,7 @@ const sections = {
       ["antur","Антур","images/sea_animales/Антур.jpeg"],
       ["belokrylaya","Белокрылая морская свинья","images/sea_animales/Белокрылая моская свинья.jpeg"],
       ["belukha","Белуха","images/sea_animales/Белуха.jpeg"],
-      ["gorbatyi_kit","Горбатый кит","images/sea_animales/Горбатый кит.jpeg"],
+      ["gorbatyi_kit","Горбатый кит","images/sea_animales/Горбатый кит.jpeg"],
       ["dugon","Дюгонь — морская корова","images/sea_animales/Дюгонь - морская корова.jpeg"],
       ["kalan","Калан","images/sea_animales/Калан.webp"],
       ["kashalot","Кашалот","images/sea_animales/Кашалот.jpeg"],
@@ -46,13 +46,13 @@ const sections = {
       ["larga","Ларга","images/sea_animales/Ларга.jpeg"],
       ["lahtak","Лахтак","images/sea_animales/Лахтак.jpeg"],
       ["morzh","Морж","images/sea_animales/Морж.jpeg"],
-      ["morskoi_kotik","Морской котик","images/sea_animales/Морской котик.jpeg"],
-      ["morskoi_lev","Морской лев","images/sea_animales/Морской лев.jpeg"],
-      ["delfin","Обыкновенный дельфин","images/sea_animales/Обыкновенный дельфин.jpeg"],
-      ["severnyi_kotik","Северный морской котик","images/sea_animales/Северный морской котик.jpeg"],
-      ["finval","Северный финвал","images/sea_animales/Северный финвал.jpeg"],
-      ["seryi_kit","Серый кит","images/sea_animales/Серый кит.jpeg"],
-      ["sinii_kit","Синий кит","images/sea_animales/Синий кит.jpeg"]
+      ["morskoi_kotik","Морской котик","images/sea_animales/Морской котик.jpeg"],
+      ["morskoi_lev","Морской лев","images/sea_animales/Морской лев.jpeg"],
+      ["delfin","Обыкновенный дельфин","images/sea_animales/Обыкновенный дельфин.jpeg"],
+      ["severnyi_kotik","Северный морской котик","images/sea_animales/Северный морской котик.jpeg"],
+      ["finval","Северный финвал","images/sea_animales/Северный финвал.jpeg"],
+      ["seryi_kit","Серый кит","images/sea_animales/Серый кит.jpeg"],
+      ["sinii_kit","Синий кит","images/sea_animales/Синий кит.jpeg"]
     ]
   }
 };
@@ -224,11 +224,6 @@ function checkPair(){
     pictureCard.classList.add("correct","locked");
     nameCard.disabled=true;
     pictureCard.disabled=true;
-
-    const check=document.createElement("span");
-    check.className="check";
-    check.textContent="✓";
-    pictureCard.appendChild(check);
 
     statusEl.textContent=matched.size===4
       ?(pageIndex===3?"Раздел пройден":"Все 4 пары найдены")
