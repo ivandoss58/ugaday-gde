@@ -12,8 +12,35 @@
 */
 
 const sections = {
+  mashrooms: {
+    title: "Карта № 1. ГРИБЫ",
+    subtitle: "Соедини название с изображением",
+    description: "16 грибов • 4 страницы",
+    pairs: [
+      ["podberiozovik", "Подберёзовик", "images/mashrooms/podberiozovik.jpeg"],
+      ["belygrib", "Белый гриб, или боровик", "images/mashrooms/belygrib.jpg"],
+      ["podosinovik", "Подосиновик", "images/mashrooms/podosinovik.jpg"],
+      ["opionok", "Опёнок", "images/mashrooms/opionok.jpg"],
+  
+      ["muhomor", "Мухомор (ядовит)", "images/mashrooms/muhomor.jpg"],
+      ["smorchok", "Сморчок", "images/mashrooms/smorchok.jpg"],
+      ["shampinion", "Шампиньон", "images/mashrooms/shampinion.jpeg"],
+      ["lisichka", "Лисичка", "images/mashrooms/lisichka.jpg"],
+  
+      ["volnushka", "Волнушка", "images/mashrooms/volnushka.jpg"],
+      ["rygik", "Рыжик", "images/mashrooms/rygik.jpg"],
+      ["maslionok", "Маслёнок", "images/mashrooms/maslionok.jpg"],
+      ["strochok", "Строчок", "images/mashrooms/strochok.jpg"]
+      
+      ["syroezhka", "Сыроежка", "images/mashrooms/syroezhka.jpeg"],
+      ["lozhnyopionok", "Ложный опёнок (ядовит)", "images/mashrooms/lozhnyopionok.jpeg"],
+      ["poddubovik", "Поддубовик", "images/mashrooms/poddubovik.jpeg"],
+      ["poganka", "Бледная поганка (ядовита)", "images/mashrooms/poganka.jpeg"]
+    ]
+  },
+  
   cities: {
-    title: "Города",
+    title: "Карта № 2. ДЕРЕВЬЯ",
     subtitle: "Соедини название города с его изображением",
     description: "12 городов • 3 страницы",
     pairs: [
@@ -35,7 +62,7 @@ const sections = {
   },
 
   signs: {
-    title: "Дорожные знаки",
+    title: "Карта № 3. ЛЕКАРСТВЕННЫЕ РАСТЕНИЯ",
     subtitle: "Соедини название со знаком",
     description: "12 знаков • 3 страницы",
     pairs: [
@@ -56,30 +83,8 @@ const sections = {
     ]
   },
 
-  mashrooms: {
-    title: "Грибы",
-    subtitle: "Соедини название с изображением",
-    description: "12 грибов • 3 страницы",
-    pairs: [
-      ["gruzd", "Груздь", "images/mashrooms/gruzd.jpg"],
-      ["belygrib", "Белый гриб", "images/mashrooms/belygrib.jpg"],
-      ["veshenka", "Вешенка", "images/mashrooms/veshenka.jpg"],
-      ["opionok", "Опёнок", "images/mashrooms/opionok.jpg"],
-
-      ["muhomor", "Мухомор", "images/mashrooms/muhomor.jpg"],
-      ["smorchok", "Сморчок", "images/mashrooms/smorchok.jpg"],
-      ["shampinion", "Шампиньон", "images/mashrooms/shampinion.jpg"],
-      ["lisichka", "Лисичка", "images/mashrooms/lisichka.jpg"],
-
-      ["volnushka", "Волнушка", "images/mashrooms/volnushka.jpg"],
-      ["rygik", "Рыжик", "images/mashrooms/rygik.jpg"],
-      ["maslionok", "Маслёнок", "images/mashrooms/maslionok.jpg"],
-      ["strochok", "Строчок", "images/mashrooms/strochok.jpg"]
-    ]
-  },
-  
   flowers: {
-    title: "Цветы",
+    title: "Карта № 4. НАСЕКОМЫЕ",
     subtitle: "Соедини название с изображением цветка",
     description: "12 цветов • 3 страницы",
     pairs: [
@@ -87,12 +92,12 @@ const sections = {
       ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
       ["sunflower", "Подсолнух", "🌻", "images/flowers/sunflower.jpg"],
       ["daisy", "Ромашка", "🌼", "images/flowers/daisy.jpg"],
-
+  
       ["lavender", "Лаванда", "💜", "images/flowers/lavender.jpg"],
       ["orchid", "Орхидея", "🪻", "images/flowers/orchid.jpg"],
       ["poppy", "Мак", "🌺", "images/flowers/poppy.jpg"],
       ["lily", "Лилия", "🌸", "images/flowers/lily.jpg"],
-
+  
       ["iris", "Ирис", "💠", "images/flowers/iris.jpg"],
       ["peony", "Пион", "🌸", "images/flowers/peony.jpg"],
       ["carnation", "Гвоздика", "🌺", "images/flowers/carnation.jpg"],
@@ -100,37 +105,94 @@ const sections = {
     ]
   },
 
-  seaanimales: {
-	  title: "Морские млекопитающие",
-	  subtitle: "Соедини название с изображением",
-	  description: "12 млекопитающих • 3 страницы",
-      pairs: [
-		["antur", "Антур", "images/sea_animales/Антур.jpeg"],
-		["morskayasvinya", "Белокрылая морская свинья", "images/sea_animales/Белокрылая моская свинья.jpeg"],
-		["beluha", "Белуха", "images/sea_animales/Белуха.jpeg"],
-		["gorbatykit", "Горбатый кит", "images/sea_animales/Горбатый кит.jpeg"],
+  flowers: {
+    title: "Карта № 5. ПЕРНАТЫЕ ДРУЗЬЯ",
+    subtitle: "Соедини название с изображением цветка",
+    description: "12 цветов • 3 страницы",
+    pairs: [
+      ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
+      ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
+      ["sunflower", "Подсолнух", "🌻", "images/flowers/sunflower.jpg"],
+      ["daisy", "Ромашка", "🌼", "images/flowers/daisy.jpg"],
   
-		["dyugon", "Дюгонь - морская корова", "images/sea_animales/Дюгонь - морская корова.jpeg"],
-		["kalan", "Калан", "images/sea_animales/Калан.webp"],
-		["kashalot", "Кашалот", "images/sea_animales/Кашалот.jpeg"],
-		["kolchatayanerpa", "Кольчатая нерпа", "images/sea_animales/Кольчатая нерпа.webp"],
+      ["lavender", "Лаванда", "💜", "images/flowers/lavender.jpg"],
+      ["orchid", "Орхидея", "🪻", "images/flowers/orchid.jpg"],
+      ["poppy", "Мак", "🌺", "images/flowers/poppy.jpg"],
+      ["lily", "Лилия", "🌸", "images/flowers/lily.jpg"],
   
-		["kosatka", "Косатка", "images/sea_animales/Косатка.jpeg"],
-		["krylatka", "Крылатка", "images/sea_animales/Крылатка.jpeg"],
-		["larga", "Ларга", "images/sea_animales/Ларга.jpeg"],
-		["lahtak", "Лахтак", "images/sea_animales/Лахтак.jpeg"],
-		
-		["morzh", "Морж", "images/sea_animales/Морж.jpeg"],
-		["morskoicotic", "Морской котик", "images/sea_animales/Морской котик.jpeg"],
-		["morskoilev", "Морской лев", "images/sea_animales/Морской лев.jpeg"],
-		["dolphin", "Обыкновенный дельфин", "images/sea_animales/Обыкновенный дельфин.jpeg"],
-		  
-		["sevmorskoikotik", "Северный морской котик", "images/sea_animales/Северный морской котик.jpeg"],
-		["phinval", "Северный финвал", "images/sea_animales/Северный финвал.jpeg"],
-		["serykit", "Серый кит", "images/sea_animales/Серый кит.jpeg"],
-		["sinikit", "Синий кит", "images/sea_animales/Синий кит.jpeg"]
-	  ]
-	}
+      ["iris", "Ирис", "💠", "images/flowers/iris.jpg"],
+      ["peony", "Пион", "🌸", "images/flowers/peony.jpg"],
+      ["carnation", "Гвоздика", "🌺", "images/flowers/carnation.jpg"],
+      ["chamomile", "Ромашка полевая", "🌼", "images/flowers/chamomile.jpg"]
+    ]
+  },
+  
+  flowers: {
+    title: "Карта № 6. АКВАРИУМНЫЕ РЫБЫ",
+    subtitle: "Соедини название с изображением цветка",
+    description: "12 цветов • 3 страницы",
+    pairs: [
+      ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
+      ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
+      ["sunflower", "Подсолнух", "🌻", "images/flowers/sunflower.jpg"],
+      ["daisy", "Ромашка", "🌼", "images/flowers/daisy.jpg"],
+  
+      ["lavender", "Лаванда", "💜", "images/flowers/lavender.jpg"],
+      ["orchid", "Орхидея", "🪻", "images/flowers/orchid.jpg"],
+      ["poppy", "Мак", "🌺", "images/flowers/poppy.jpg"],
+      ["lily", "Лилия", "🌸", "images/flowers/lily.jpg"],
+  
+      ["iris", "Ирис", "💠", "images/flowers/iris.jpg"],
+      ["peony", "Пион", "🌸", "images/flowers/peony.jpg"],
+      ["carnation", "Гвоздика", "🌺", "images/flowers/carnation.jpg"],
+      ["chamomile", "Ромашка полевая", "🌼", "images/flowers/chamomile.jpg"]
+    ]
+  },
+  
+  flowers: {
+    title: "Карта № 7. ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ",
+    subtitle: "Соедини название с изображением цветка",
+    description: "12 цветов • 3 страницы",
+    pairs: [
+      ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
+      ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
+      ["sunflower", "Подсолнух", "🌻", "images/flowers/sunflower.jpg"],
+      ["daisy", "Ромашка", "🌼", "images/flowers/daisy.jpg"],
+  
+      ["lavender", "Лаванда", "💜", "images/flowers/lavender.jpg"],
+      ["orchid", "Орхидея", "🪻", "images/flowers/orchid.jpg"],
+      ["poppy", "Мак", "🌺", "images/flowers/poppy.jpg"],
+      ["lily", "Лилия", "🌸", "images/flowers/lily.jpg"],
+  
+      ["iris", "Ирис", "💠", "images/flowers/iris.jpg"],
+      ["peony", "Пион", "🌸", "images/flowers/peony.jpg"],
+      ["carnation", "Гвоздика", "🌺", "images/flowers/carnation.jpg"],
+      ["chamomile", "Ромашка полевая", "🌼", "images/flowers/chamomile.jpg"]
+    ]
+  },
+  
+  flowers: {
+    title: "Карта № 8, МИНЕРАЛЫ",
+    subtitle: "Соедини название с изображением цветка",
+    description: "12 цветов • 3 страницы",
+    pairs: [
+      ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
+      ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
+      ["sunflower", "Подсолнух", "🌻", "images/flowers/sunflower.jpg"],
+      ["daisy", "Ромашка", "🌼", "images/flowers/daisy.jpg"],
+  
+      ["lavender", "Лаванда", "💜", "images/flowers/lavender.jpg"],
+      ["orchid", "Орхидея", "🪻", "images/flowers/orchid.jpg"],
+      ["poppy", "Мак", "🌺", "images/flowers/poppy.jpg"],
+      ["lily", "Лилия", "🌸", "images/flowers/lily.jpg"],
+  
+      ["iris", "Ирис", "💠", "images/flowers/iris.jpg"],
+      ["peony", "Пион", "🌸", "images/flowers/peony.jpg"],
+      ["carnation", "Гвоздика", "🌺", "images/flowers/carnation.jpg"],
+      ["chamomile", "Ромашка полевая", "🌼", "images/flowers/chamomile.jpg"]
+    ]
+  }
+  
 };
 
 const app = document.querySelector(".app");
@@ -218,7 +280,7 @@ function startSection(key) {
 
   // При каждом новом запуске раздела случайно выбираем 12 пар
   // из всего списка. Эти 12 пар сохраняются до конца текущей игры.
-  selectedPairs = shuffle(currentSection.pairs).slice(0, 12);
+  selectedPairs = shuffle(currentSection.pairs).slice(0, 16);
 
   pageIndex = 0;
 
@@ -242,13 +304,13 @@ function resetPage() {
   selectedPicture = null;
 
   nextBtn.disabled = true;
-  nextBtn.textContent = pageIndex === 2 ? "Завершить" : "Далее";
+  nextBtn.textContent = pageIndex === 3 ? "Завершить" : "Далее";
 
   statusEl.textContent = "";
 
   gameTitle.textContent = "Найди пару";
   gameSubtitle.textContent = currentSection.subtitle;
-  pageLabel.textContent = `${currentSection.title} • ${pageIndex + 1} / 3`;
+  pageLabel.textContent = `${currentSection.title} • ${pageIndex + 1} / 4`;
 
   render();
 }
@@ -352,7 +414,7 @@ function checkPair() {
     if (matched.size === 4) {
       nextBtn.disabled = false;
       statusEl.textContent =
-        pageIndex === 2
+        pageIndex === 3
           ? "Раздел пройден"
           : "Все 4 пары найдены";
     }
@@ -386,7 +448,7 @@ function checkPair() {
 
 function updateProgress() {
   const total = pageIndex * 4 + matched.size;
-  const percent = (total / 12) * 100;
+  const percent = (total / 16) * 100;
 
   progressFill.style.width = `${Math.max(8, percent)}%`;
 }
@@ -394,7 +456,7 @@ function updateProgress() {
 nextBtn.addEventListener("click", () => {
   if (matched.size !== 4) return;
 
-  if (pageIndex < 2) {
+  if (pageIndex < 3) {
     pageIndex++;
     resetPage();
   } else {
