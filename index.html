@@ -3,56 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Угадай где</title>
+  <meta name="theme-color" content="#0b1838">
+  <title>Угадай где — Вопросы и ответы</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
-
-   <!-- Стартовый экран -->
-   <section id="startScreen" class="screen start-screen">
-
-     <div class="start-cover">
-       <img src="images/game-cover.jpg" alt="Игра-викторина">
-     </div>
-
-     <div class="start-content">
-        <h1>Игра-викторина<br>«Вопросы — ответы»</h1>
-
-        <p>Проверь свои знания и узнавай новое</p>
-
-        <button id="playBtn" class="play-btn">
-      Играть
-        </button>
+    <section id="startScreen" class="screen start-screen" aria-label="Стартовый экран">
+      <picture class="start-cover">
+        <img src="images/game-cover.jpg" alt="Игра-викторина" fetchpriority="high">
+      </picture>
+      <div class="start-overlay"></div>
+      <div class="start-content">
+        <button id="playBtn" class="play-btn" type="button">Играть</button>
       </div>
-
     </section>
-    
-    <!-- Верхняя панель -->
-    <header class="topbar">
-      <button class="close-btn" id="backBtn" aria-label="Назад">×</button>
-      <div class="progress">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-      <div class="lives">
-        <span>♥</span>
-        <b id="lives">3</b>
-      </div>
-    </header>
 
-    <!-- Страница выбора раздела -->
-    <section id="menuScreen" class="screen menu-screen">
-      <div class="intro">
-        <h1>Угадай где</h1>
-        <p>Выбери раздел</p>
+    <section id="menuScreen" class="screen menu-screen hidden" aria-label="Выбор раздела">
+      <div class="menu-header">
+        <h1>Выбери раздел</h1>
+        <p>Соедини название с правильным изображением</p>
       </div>
-
       <div class="sections" id="sections"></div>
     </section>
 
-    <!-- Игровая страница -->
-    <section id="gameScreen" class="screen game-screen hidden">
-      <div class="intro">
+    <section id="gameScreen" class="screen game-screen hidden" aria-label="Игра">
+      <header class="topbar">
+        <button class="close-btn" id="backBtn" type="button" aria-label="Вернуться к разделам">×</button>
+        <div class="progress" aria-label="Прогресс">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="lives" aria-label="Жизни">
+          <span>♥</span><b id="lives">3</b>
+        </div>
+      </header>
+
+      <div class="game-header">
         <div class="eyebrow" id="pageLabel"></div>
         <h1 id="gameTitle">Найди пару</h1>
         <p id="gameSubtitle"></p>
@@ -63,12 +49,10 @@
         <div class="column" id="picturesColumn"></div>
       </section>
 
-      <button class="next-btn" id="nextBtn" disabled>Далее</button>
+      <button class="next-btn" id="nextBtn" type="button" disabled>Далее</button>
       <div class="status" id="status" aria-live="polite"></div>
     </section>
-
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>
