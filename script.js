@@ -31,7 +31,7 @@ const sections = {
   sea_animals: {
     title: "ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ",
     subtitle: "Соедини название с изображением",
-    description: "20 животных • случайный выбор 16 • 4 страницы",
+    description: "20 животных • 4 страницы",
     pairs: [
       ["antur","Антур","images/sea_animales/Антур.jpeg"],
       ["belokrylaya","Белокрылая морская свинья","images/sea_animales/Белокрылая моская свинья.jpeg"],
