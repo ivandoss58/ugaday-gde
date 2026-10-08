@@ -39,7 +39,7 @@ const sections = {
     ]
   },
   
-  cities: {
+  trees: {
     title: "Карта № 2. ДЕРЕВЬЯ",
     subtitle: "Соедини название города с его изображением",
     description: "12 городов • 3 страницы",
@@ -61,7 +61,7 @@ const sections = {
     ]
   },
 
-  signs: {
+  medicinal_plants: {
     title: "Карта № 3. ЛЕКАРСТВЕННЫЕ РАСТЕНИЯ",
     subtitle: "Соедини название со знаком",
     description: "12 знаков • 3 страницы",
@@ -83,7 +83,7 @@ const sections = {
     ]
   },
 
-  flowers: {
+  insects: {
     title: "Карта № 4. НАСЕКОМЫЕ",
     subtitle: "Соедини название с изображением цветка",
     description: "12 цветов • 3 страницы",
@@ -105,7 +105,7 @@ const sections = {
     ]
   },
 
-  flowers: {
+  feathered_friends: {
     title: "Карта № 5. ПЕРНАТЫЕ ДРУЗЬЯ",
     subtitle: "Соедини название с изображением цветка",
     description: "12 цветов • 3 страницы",
@@ -127,7 +127,7 @@ const sections = {
     ]
   },
   
-  flowers: {
+  aquarium_fish: {
     title: "Карта № 6. АКВАРИУМНЫЕ РЫБЫ",
     subtitle: "Соедини название с изображением цветка",
     description: "12 цветов • 3 страницы",
@@ -149,7 +149,7 @@ const sections = {
     ]
   },
   
-  flowers: {
+  fauna_of_the_seas_and_oceans: {
     title: "Карта № 7. ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ",
     subtitle: "Соедини название с изображением цветка",
     description: "12 цветов • 3 страницы",
@@ -171,7 +171,7 @@ const sections = {
     ]
   },
   
-  flowers: {
+  minerals: {
     title: "Карта № 8, МИНЕРАЛЫ",
     subtitle: "Соедини название с изображением цветка",
     description: "12 цветов • 3 страницы",
