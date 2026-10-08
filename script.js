@@ -41,8 +41,8 @@ const sections = {
   
   trees: {
     title: "Карта № 2. ДЕРЕВЬЯ",
-    subtitle: "Соедини название города с его изображением",
-    description: "12 городов • 3 страницы",
+    subtitle: "Соедини название с изображением",
+    description: "16 деревьев • 4 страницы",
     pairs: [
       ["paris", "Париж", "🇫🇷", "images/cities/paris.jpg"],
       ["tokyo", "Токио", "🇯🇵", "images/cities/tokyo.jpg"],
@@ -63,8 +63,8 @@ const sections = {
 
   medicinal_plants: {
     title: "Карта № 3. ЛЕКАРСТВЕННЫЕ РАСТЕНИЯ",
-    subtitle: "Соедини название со знаком",
-    description: "12 знаков • 3 страницы",
+    subtitle: "Соедини название с изображением",
+    description: "16 растений • 4 страницы",
     pairs: [
       ["stop", "Стоп", "images/signs/stop.jpg"],
       ["yield", "Уступи дорогу", "images/signs/yield.jpg"],
@@ -85,8 +85,8 @@ const sections = {
 
   insects: {
     title: "Карта № 4. НАСЕКОМЫЕ",
-    subtitle: "Соедини название с изображением цветка",
-    description: "12 цветов • 3 страницы",
+    subtitle: "Соедини название с изображением",
+    description: "16 насекомых • 4 страницы",
     pairs: [
       ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
       ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
@@ -107,8 +107,8 @@ const sections = {
 
   feathered_friends: {
     title: "Карта № 5. ПЕРНАТЫЕ ДРУЗЬЯ",
-    subtitle: "Соедини название с изображением цветка",
-    description: "12 цветов • 3 страницы",
+    subtitle: "Соедини название с изображением",
+    description: "16 птиц • 4 страницы",
     pairs: [
       ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
       ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
@@ -129,8 +129,8 @@ const sections = {
   
   aquarium_fish: {
     title: "Карта № 6. АКВАРИУМНЫЕ РЫБЫ",
-    subtitle: "Соедини название с изображением цветка",
-    description: "12 цветов • 3 страницы",
+    subtitle: "Соедини название с изображением",
+    description: "16 рыб • 4 страницы",
     pairs: [
       ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
       ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
@@ -151,8 +151,8 @@ const sections = {
   
   fauna_of_the_seas_and_oceans: {
     title: "Карта № 7. ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ",
-    subtitle: "Соедини название с изображением цветка",
-    description: "12 цветов • 3 страницы",
+    subtitle: "Соедини название с изображением",
+    description: "16 животных • 4 страницы",
     pairs: [
       ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
       ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
@@ -173,8 +173,8 @@ const sections = {
   
   minerals: {
     title: "Карта № 8, МИНЕРАЛЫ",
-    subtitle: "Соедини название с изображением цветка",
-    description: "12 цветов • 3 страницы",
+    subtitle: "Соедини название с изображением",
+    description: "16 минералов • 4 страницы",
     pairs: [
       ["rose", "Роза", "🌹", "images/flowers/rose.jpg"],
       ["tulip", "Тюльпан", "🌷", "images/flowers/tulip.jpg"],
