@@ -30,7 +30,7 @@ const sections = {
       ["volnushka", "Волнушка", "images/mashrooms/volnushka.jpg"],
       ["rygik", "Рыжик", "images/mashrooms/rygik.jpg"],
       ["maslionok", "Маслёнок", "images/mashrooms/maslionok.jpg"],
-      ["strochok", "Строчок", "images/mashrooms/strochok.jpg"]
+      ["strochok", "Строчок", "images/mashrooms/strochok.jpg"],
       
       ["syroezhka", "Сыроежка", "images/mashrooms/syroezhka.jpeg"],
       ["lozhnyopionok", "Ложный опёнок (ядовит)", "images/mashrooms/lozhnyopionok.jpeg"],
