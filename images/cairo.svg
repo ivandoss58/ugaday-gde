@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-<rect width="800" height="600" fill="#bfe8ff"/><rect y="360" width="800" height="240" fill="#d9ad65"/>
-<path d="M110 430 L260 180 L410 430Z" fill="#b77b35"/><path d="M350 430 L505 140 L660 430Z" fill="#c58a42"/><path d="M455 430 L525 285 L595 430Z" fill="#a97031"/>
-<text x="40" y="70" font-family="Arial" font-size="42" fill="#fff" font-weight="700">CAIRO</text>
-</svg>
