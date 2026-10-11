@@ -57,10 +57,11 @@ const sections = {
   }
 };
 
-const startScreen=document.getElementById("startScreen");
-const playBtn=document.getElementById("playBtn");
+
 const menuScreen=document.getElementById("menuScreen");
 const gameScreen=document.getElementById("gameScreen");
+const startScreen=document.getElementById("startScreen");
+const playBtn=document.getElementById("playBtn");
 const sectionsEl=document.getElementById("sections");
 const namesColumn=document.getElementById("namesColumn");
 const picturesColumn=document.getElementById("picturesColumn");
@@ -275,3 +276,7 @@ backBtn.addEventListener("click",showMenu);
 
 renderMenu();
 showStart();
+
+playBtn.addEventListener("click", () => {
+  showMenu();
+});
