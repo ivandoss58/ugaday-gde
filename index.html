@@ -9,17 +9,25 @@
 </head>
 <body>
   <main class="app">
-    <section id="startScreen" class="screen start-screen" aria-label="Стартовый экран">
-      <picture class="start-cover">
-        <img src="images/game-cover.jpg" alt="Игра-викторина" fetchpriority="high">
-      </picture>
-      <div class="start-overlay"></div>
-      <div id="startScreen" class="screen start-screen">
-          <button id="playBtn" class="play-btn">
-              <img src="images/start-button.png" alt="Играть" />
-          </button>
-</div>
-    </section>
+    
+<section id="startScreen" class="screen start-screen" aria-label="Стартовый экран">
+  <picture class="start-cover">
+    <img
+      src="images/game-cover.jpg"
+      alt="Обложка игры-викторины"
+      fetchpriority="high"
+    >
+  </picture>
+
+  <div class="start-overlay"></div>
+
+  <div class="start-content">
+    <button id="playBtn" class="play-btn" type="button" aria-label="Играть">
+      <img src="images/start-button.png" alt="Играть">
+    </button>
+  </div>
+</section>
+
 
     <section id="menuScreen" class="screen menu-screen hidden" aria-label="Выбор раздела">
       <div class="menu-header">
