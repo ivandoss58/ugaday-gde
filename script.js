@@ -277,6 +277,3 @@ backBtn.addEventListener("click",showMenu);
 renderMenu();
 showStart();
 
-playBtn.addEventListener("click", () => {
-  showMenu();
-});
