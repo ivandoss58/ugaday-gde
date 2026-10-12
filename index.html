@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,25 +10,17 @@
 </head>
 <body>
   <main class="app">
-    
-<section id="startScreen" class="screen start-screen" aria-label="Стартовый экран">
-  <picture class="start-cover">
-    <img
-      src="images/game-cover.jpg"
-      alt="Обложка игры-викторины"
-      fetchpriority="high"
-    >
-  </picture>
-
-  <div class="start-overlay"></div>
-
-  <div class="start-content">
-    <button id="playBtn" class="play-btn" type="button" aria-label="Играть">
-      <img src="images/start-button.png" alt="Играть">
-    </button>
-  </div>
-</section>
-
+    <section id="startScreen" class="screen start-screen" aria-label="Стартовый экран">
+      <picture class="start-cover">
+        <img src="images/game-cover.jpg" alt="Обложка игры-викторины" fetchpriority="high">
+      </picture>
+      <div class="start-overlay"></div>
+      <div class="start-content">
+        <button id="playBtn" class="play-btn" type="button" aria-label="Играть">
+          <img src="images/start-button.png" alt="Играть">
+        </button>
+      </div>
+    </section>
 
     <section id="menuScreen" class="screen menu-screen hidden" aria-label="Выбор раздела">
       <div class="menu-header">
@@ -62,7 +55,38 @@
       <button class="next-btn" id="nextBtn" type="button" disabled>Далее</button>
       <div class="status" id="status" aria-live="polite"></div>
     </section>
+
+    <section id="resultsScreen" class="screen results-screen hidden" aria-label="Результаты карточки">
+      <div class="results-panel">
+        <div class="results-trophy" aria-hidden="true">🏆</div>
+        <p class="results-eyebrow" id="resultsEyebrow">ОТЛИЧНАЯ РАБОТА!</p>
+        <h1 id="resultsTitle">Карточка пройдена!</h1>
+        <p class="results-message" id="resultsMessage">Вы нашли все пары!</p>
+
+        <div class="results-stats">
+          <div class="stat-card">
+            <span class="stat-icon" aria-hidden="true">✓</span>
+            <strong id="resultPairs">4 из 4</strong>
+            <span>Найдено пар</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon error-icon" aria-hidden="true">×</span>
+            <strong id="resultErrors">0</strong>
+            <span>Ошибок</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon page-icon" aria-hidden="true">▤</span>
+            <strong id="resultPage">1 из 4</strong>
+            <span>Страница</span>
+          </div>
+        </div>
+
+        <button id="resultsNextBtn" class="results-next-btn" type="button">Дальше</button>
+        <button id="resultsMenuBtn" class="results-menu-btn" type="button">В меню</button>
+      </div>
+    </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
