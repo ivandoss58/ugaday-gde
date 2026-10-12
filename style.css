@@ -594,14 +594,16 @@ button {
         margin: 7px 0 14px;
     }
 
-    .results-stats {
-        margin-bottom: 14px;
-    }
+.results-stats {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 22px;
+}
 
-    .stat-card {
-        gap: 5px;
-        padding: 9px 4px;
-    }
+.results-stats .stat-card {
+    width: 290px;
+    max-width: 100%;
+}
 
     .stat-icon {
         width: 29px;
