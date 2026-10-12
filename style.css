@@ -465,6 +465,12 @@ button {
     );
 }
 
+#resultErrors {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
 .results-panel {
     width: min(100%, 520px);
     max-height: 100%;
