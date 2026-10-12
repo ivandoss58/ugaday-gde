@@ -110,9 +110,18 @@ function startSection(key){
 }
 function currentPairs(){return selectedPairs.slice(pageIndex*4,pageIndex*4+4);}
 function resetPage(){
-  lives=3;pageErrors=0;pageLocked=false;livesEl.textContent=lives;matched.clear();selectedName=null;selectedPicture=null;
-  nextBtn.disabled=true;nextBtn.textContent=pageIndex===3?"Завершить":"Далее";statusEl.textContent="";
-  gameTitle.textContent="Найди пару";gameSubtitle.textContent=currentSection.subtitle;pageLabel.textContent=`${currentSection.title} • ${pageIndex+1} / 4`;
+  lives=3;
+  pageErrors=0;
+  pageLocked=false;
+  livesEl.textContent=lives;
+  matched.clear();
+  selectedName=null;
+  selectedPicture=null;
+  nextBtn.disabled=true;
+  nextBtn.textContent = pageIndex === 3 ? "Результаты" : "Далее";
+  statusEl.textContent="";
+  gameTitle.textContent="Найди пару";
+  gameSubtitle.textContent=currentSection.subtitle;pageLabel.textContent=`${currentSection.title} • ${pageIndex+1} / 4`;
   render();
 }
 function render(){
@@ -169,7 +178,9 @@ function showResults(){
   if(matched.size!==4)return;
   gameScreen.classList.add("hidden");resultsScreen.classList.remove("hidden");
   const lastPage=pageIndex===3;
-  resultsEyebrow.textContent=pageErrors===0?"БЕЗ ОШИБОК!":"ОТЛИЧНАЯ РАБОТА!";
+  resultsEyebrow.textContent = sectionErrors === 0
+    ? "БЕЗ ОШИБОК!"
+    : "ОТЛИЧНАЯ РАБОТА!";
   resultsTitle.textContent = "Карточка пройдена!";
   resultsMessage.textContent = "Ты прошел всю карточку!";
   resultPairs.textContent = "16 из 16";
