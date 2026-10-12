@@ -1,12 +1,11 @@
+
 /*
  * ИГРА «ВОПРОСЫ — ОТВЕТЫ»
  * 4 страницы по 4 пары.
  */
-
 const sections = {
   mushrooms: {
-    title: "ГРИБЫ",
-    subtitle: "Соедини название с изображением",
+    title: "ГРИБЫ", subtitle: "Соедини название с изображением",
     description: "16 грибов • 4 страницы",
     pairs: [
       ["podberiozovik","Подберёзовик","images/mashrooms/podberiozovik.jpeg"],
@@ -27,10 +26,8 @@ const sections = {
       ["poganka","Бледная поганка (ядовита)","images/mashrooms/poganka.jpeg"]
     ]
   },
-
   sea_animals: {
-    title: "ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ",
-    subtitle: "Соедини название с изображением",
+    title: "ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ", subtitle: "Соедини название с изображением",
     description: "20 животных • 4 страницы",
     pairs: [
       ["antur","Антур","images/sea_animales/Антур.jpeg"],
@@ -57,9 +54,9 @@ const sections = {
   }
 };
 
-
 const menuScreen=document.getElementById("menuScreen");
 const gameScreen=document.getElementById("gameScreen");
+const resultsScreen=document.getElementById("resultsScreen");
 const startScreen=document.getElementById("startScreen");
 const playBtn=document.getElementById("playBtn");
 const sectionsEl=document.getElementById("sections");
@@ -73,207 +70,100 @@ const gameTitle=document.getElementById("gameTitle");
 const gameSubtitle=document.getElementById("gameSubtitle");
 const pageLabel=document.getElementById("pageLabel");
 const backBtn=document.getElementById("backBtn");
+const resultsTitle=document.getElementById("resultsTitle");
+const resultsMessage=document.getElementById("resultsMessage");
+const resultsEyebrow=document.getElementById("resultsEyebrow");
+const resultPairs=document.getElementById("resultPairs");
+const resultErrors=document.getElementById("resultErrors");
+const resultPage=document.getElementById("resultPage");
+const resultsNextBtn=document.getElementById("resultsNextBtn");
+const resultsMenuBtn=document.getElementById("resultsMenuBtn");
 
-let currentSection=null;
-let selectedPairs=[];
-let pageIndex=0;
-let selectedName=null;
-let selectedPicture=null;
-let matched=new Set();
-let lives=3;
+let currentSection=null, selectedPairs=[], pageIndex=0, selectedName=null, selectedPicture=null;
+let matched=new Set(), lives=3, pageErrors=0, pageLocked=false;
 
 function shuffle(array){
   const result=[...array];
-  for(let i=result.length-1;i>0;i--){
-    const j=Math.floor(Math.random()*(i+1));
-    [result[i],result[j]]=[result[j],result[i]];
-  }
+  for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}
   return result;
 }
-
-function showStart(){
-  startScreen.classList.remove("hidden");
-  menuScreen.classList.add("hidden");
-  gameScreen.classList.add("hidden");
-}
-
-function showMenu(){
-  startScreen.classList.add("hidden");
-  menuScreen.classList.remove("hidden");
-  gameScreen.classList.add("hidden");
-  currentSection=null;
-  progressFill.style.width="0%";
-}
-
+function showStart(){startScreen.classList.remove("hidden");menuScreen.classList.add("hidden");gameScreen.classList.add("hidden");resultsScreen.classList.add("hidden");}
+function showMenu(){startScreen.classList.add("hidden");menuScreen.classList.remove("hidden");gameScreen.classList.add("hidden");resultsScreen.classList.add("hidden");currentSection=null;progressFill.style.width="0%";}
 function renderMenu(){
   sectionsEl.innerHTML="";
   Object.entries(sections).forEach(([key,section])=>{
-    const button=document.createElement("button");
-    button.type="button";
-    button.className="section-btn";
-    button.innerHTML=
-      `<span class="section-title">${section.title}</span>
-       <span class="section-subtitle">${section.description}</span>`;
-    button.addEventListener("click",()=>startSection(key));
-    sectionsEl.appendChild(button);
+    const button=document.createElement("button");button.type="button";button.className="section-btn";
+    button.innerHTML=`<span class="section-title">${section.title}</span><span class="section-subtitle">${section.description}</span>`;
+    button.addEventListener("click",()=>startSection(key));sectionsEl.appendChild(button);
   });
 }
-
 function startSection(key){
   currentSection=sections[key];
-
-  if(currentSection.pairs.length<16){
-    console.error("В разделе недостаточно пар:",key);
-    return;
-  }
-
-  selectedPairs=shuffle(currentSection.pairs).slice(0,16);
-  pageIndex=0;
-
-  startScreen.classList.add("hidden");
-  menuScreen.classList.add("hidden");
-  gameScreen.classList.remove("hidden");
-
+  if(currentSection.pairs.length<16){console.error("В разделе недостаточно пар:",key);return;}
+  selectedPairs=shuffle(currentSection.pairs).slice(0,16);pageIndex=0;
+  startScreen.classList.add("hidden");menuScreen.classList.add("hidden");resultsScreen.classList.add("hidden");gameScreen.classList.remove("hidden");
   resetPage();
 }
-
-function currentPairs(){
-  return selectedPairs.slice(pageIndex*4,pageIndex*4+4);
-}
-
+function currentPairs(){return selectedPairs.slice(pageIndex*4,pageIndex*4+4);}
 function resetPage(){
-  lives=3;
-  livesEl.textContent=lives;
-  matched.clear();
-  selectedName=null;
-  selectedPicture=null;
-
-  nextBtn.disabled=true;
-  nextBtn.textContent=pageIndex===3?"Завершить":"Далее";
-  statusEl.textContent="";
-
-  gameTitle.textContent="Найди пару";
-  gameSubtitle.textContent=currentSection.subtitle;
-  pageLabel.textContent=`${currentSection.title} • ${pageIndex+1} / 4`;
-
+  lives=3;pageErrors=0;pageLocked=false;livesEl.textContent=lives;matched.clear();selectedName=null;selectedPicture=null;
+  nextBtn.disabled=true;nextBtn.textContent=pageIndex===3?"Завершить":"Далее";statusEl.textContent="";
+  gameTitle.textContent="Найди пару";gameSubtitle.textContent=currentSection.subtitle;pageLabel.textContent=`${currentSection.title} • ${pageIndex+1} / 4`;
   render();
 }
-
 function render(){
-  namesColumn.innerHTML="";
-  picturesColumn.innerHTML="";
-
+  namesColumn.innerHTML="";picturesColumn.innerHTML="";
   const pairs=currentPairs();
-
   shuffle(pairs).forEach(pair=>{
-    const card=document.createElement("button");
-    card.type="button";
-    card.className="card name-card";
-    card.dataset.id=pair[0];
-    card.innerHTML=`<span class="name">${pair[1]}</span>`;
-    card.addEventListener("click",()=>selectCard("name",card));
-    namesColumn.appendChild(card);
+    const card=document.createElement("button");card.type="button";card.className="card name-card";card.dataset.id=pair[0];
+    card.innerHTML=`<span class="name">${pair[1]}</span>`;card.addEventListener("click",()=>selectCard("name",card));namesColumn.appendChild(card);
   });
-
   shuffle(pairs).forEach(pair=>{
-    const card=document.createElement("button");
-    card.type="button";
-    card.className="card image-card";
-    card.dataset.id=pair[0];
-
-    const image=document.createElement("img");
-    image.src=pair[2];
-    image.alt=pair[1];
-    image.loading="eager";
-    image.onerror=()=>console.warn("Не найдено изображение:",pair[2]);
-
-    card.appendChild(image);
-    card.addEventListener("click",()=>selectCard("picture",card));
-    picturesColumn.appendChild(card);
+    const card=document.createElement("button");card.type="button";card.className="card image-card";card.dataset.id=pair[0];
+    const image=document.createElement("img");image.src=pair[2];image.alt=pair[1];image.loading="eager";
+    image.onerror=()=>console.warn("Не найдено изображение:",pair[2]);card.appendChild(image);
+    card.addEventListener("click",()=>selectCard("picture",card));picturesColumn.appendChild(card);
   });
-
   updateProgress();
 }
-
 function selectCard(type,card){
-  if(matched.has(card.dataset.id)||card.disabled)return;
-
-  if(type==="name"){
-    if(selectedName)selectedName.classList.remove("selected");
-    selectedName=card;
-  }else{
-    if(selectedPicture)selectedPicture.classList.remove("selected");
-    selectedPicture=card;
-  }
-
+  if(pageLocked||matched.has(card.dataset.id)||card.disabled)return;
+  if(type==="name"){if(selectedName)selectedName.classList.remove("selected");selectedName=card;}
+  else{if(selectedPicture)selectedPicture.classList.remove("selected");selectedPicture=card;}
   card.classList.add("selected");
-
   if(selectedName&&selectedPicture)checkPair();
 }
-
 function checkPair(){
-  const nameCard=selectedName;
-  const pictureCard=selectedPicture;
+  const nameCard=selectedName,pictureCard=selectedPicture;
   const correct=nameCard.dataset.id===pictureCard.dataset.id;
-
-  nameCard.classList.remove("selected");
-  pictureCard.classList.remove("selected");
-
+  nameCard.classList.remove("selected");pictureCard.classList.remove("selected");
   if(correct){
-    matched.add(nameCard.dataset.id);
-    nameCard.classList.add("correct","locked");
-    pictureCard.classList.add("correct","locked");
-    nameCard.disabled=true;
-    pictureCard.disabled=true;
-
-    statusEl.textContent=matched.size===4
-      ?(pageIndex===3?"Раздел пройден":"Все 4 пары найдены")
-      :"Пара найдена";
-
-    if(matched.size===4)nextBtn.disabled=false;
+    matched.add(nameCard.dataset.id);nameCard.classList.add("correct","locked");pictureCard.classList.add("correct","locked");
+    nameCard.disabled=true;pictureCard.disabled=true;
+    statusEl.textContent=matched.size===4?(pageIndex===3?"Раздел пройден":"Все 4 пары найдены"):"Пара найдена";
+    if(matched.size===4){nextBtn.disabled=false;pageLocked=true;setTimeout(showResults,350);}
   }else{
-    nameCard.classList.add("wrong");
-    pictureCard.classList.add("wrong");
-    lives--;
-    livesEl.textContent=lives;
-    statusEl.textContent="Не совпадает";
-
-    setTimeout(()=>{
-      nameCard.classList.remove("wrong");
-      pictureCard.classList.remove("wrong");
-      statusEl.textContent="";
-    },550);
-
-    if(lives<=0){
-      statusEl.textContent="Жизни закончились — страница начнётся заново";
-      setTimeout(resetPage,900);
-    }
+    pageErrors++;nameCard.classList.add("wrong");pictureCard.classList.add("wrong");lives--;livesEl.textContent=lives;statusEl.textContent="Не совпадает";
+    setTimeout(()=>{nameCard.classList.remove("wrong");pictureCard.classList.remove("wrong");statusEl.textContent="";},550);
+    if(lives<=0){pageLocked=true;statusEl.textContent="Жизни закончились — страница начнётся заново";setTimeout(resetPage,900);}
   }
-
-  selectedName=null;
-  selectedPicture=null;
-  updateProgress();
+  selectedName=null;selectedPicture=null;updateProgress();
 }
-
-function updateProgress(){
-  const total=pageIndex*4+matched.size;
-  progressFill.style.width=`${(total/16)*100}%`;
+function showResults(){
+  if(matched.size!==4)return;
+  gameScreen.classList.add("hidden");resultsScreen.classList.remove("hidden");
+  const lastPage=pageIndex===3;
+  resultsEyebrow.textContent=pageErrors===0?"БЕЗ ОШИБОК!":"ОТЛИЧНАЯ РАБОТА!";
+  resultsTitle.textContent=lastPage?"Раздел пройден!":"Карточка пройдена!";
+  resultsMessage.textContent=lastPage?"Вы завершили все страницы раздела!":"Вы нашли все пары на этой странице!";
+  resultPairs.textContent="4 из 4";resultErrors.textContent=String(pageErrors);resultPage.textContent=`${pageIndex+1} из 4`;
+  resultsNextBtn.textContent=lastPage?"Завершить":"Следующая страница";
 }
+function updateProgress(){const total=pageIndex*4+matched.size;progressFill.style.width=`${(total/16)*100}%`;}
 
 playBtn.addEventListener("click",showMenu);
-
-nextBtn.addEventListener("click",()=>{
-  if(matched.size!==4)return;
-  if(pageIndex<3){
-    pageIndex++;
-    resetPage();
-  }else{
-    showMenu();
-  }
-});
-
+nextBtn.addEventListener("click",()=>{if(matched.size!==4)return;if(pageIndex<3){pageIndex++;resetPage();}else{showMenu();}});
 backBtn.addEventListener("click",showMenu);
-
-renderMenu();
-showStart();
-
+resultsNextBtn.addEventListener("click",()=>{if(pageIndex<3){pageIndex++;resultsScreen.classList.add("hidden");gameScreen.classList.remove("hidden");resetPage();}else{showMenu();}});
+resultsMenuBtn.addEventListener("click",showMenu);
+renderMenu();showStart();
