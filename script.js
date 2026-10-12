@@ -176,9 +176,15 @@ function showResults(){
   if(matched.size!==4)return;
   gameScreen.classList.add("hidden");resultsScreen.classList.remove("hidden");
   const lastPage=pageIndex===3;
-  resultsEyebrow.textContent = sectionErrors === 0
-    ? "БЕЗ ОШИБОК!"
-    : "ОТЛИЧНАЯ РАБОТА!";
+if (sectionErrors === 0) {
+  resultsEyebrow.textContent = "ОТЛИЧНАЯ РАБОТА!";
+} else if (sectionErrors <= 3) {
+  resultsEyebrow.textContent = "НЕПЛОХО!";
+} else if (sectionErrors <= 6) {
+  resultsEyebrow.textContent = "ТВОИ ЗНАНИЯ СЛАБЫЕ!";
+} else {
+  resultsEyebrow.textContent = "ОЧЕНЬ ПЛОХО, ТЕБЕ ЕЩЁ РАНО ИГРАТЬ В ЭТУ ИГРУ";
+}
   resultsTitle.textContent = "Карточка пройдена!";
   resultsMessage.textContent = "Ты прошел всю карточку!";
   resultErrors.textContent = String(sectionErrors);
