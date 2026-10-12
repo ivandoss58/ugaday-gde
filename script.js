@@ -158,10 +158,11 @@ function showResults(){
   gameScreen.classList.add("hidden");resultsScreen.classList.remove("hidden");
   const lastPage=pageIndex===3;
   resultsEyebrow.textContent=pageErrors===0?"БЕЗ ОШИБОК!":"ОТЛИЧНАЯ РАБОТА!";
-  resultsTitle.textContent=lastPage?"Раздел пройден!":"Карточка пройдена!";
-  resultsMessage.textContent=lastPage?"Вы завершили все страницы раздела!":"Вы нашли все пары на этой странице!";
-  resultPairs.textContent="4 из 4";resultErrors.textContent=String(pageErrors);resultPage.textContent=`${pageIndex+1} из 4`;
-  resultsNextBtn.textContent=lastPage?"Завершить":"Следующая страница";
+  resultsTitle.textContent = "Карточка пройдена!";
+  resultsMessage.textContent = "Ты завершил весь раздел!";
+  resultPairs.textContent = "16 из 16";
+  resultErrors.textContent = String(sectionErrors);
+  resultPage.textContent = "4 из 4";
 }
 function updateProgress(){const total=pageIndex*4+matched.size;progressFill.style.width=`${(total/16)*100}%`;}
 
