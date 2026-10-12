@@ -81,6 +81,9 @@ const resultsMenuBtn=document.getElementById("resultsMenuBtn");
 
 let currentSection=null, selectedPairs=[], pageIndex=0, selectedName=null, selectedPicture=null;
 let matched=new Set(), lives=3, pageErrors=0, pageLocked=false;
+let pageErrors = 0;
+let sectionErrors = 0;
+let pageLocked = false;
 
 function shuffle(array){
   const result=[...array];
