@@ -80,7 +80,7 @@ const resultsNextBtn=document.getElementById("resultsNextBtn");
 const resultsMenuBtn=document.getElementById("resultsMenuBtn");
 
 let currentSection=null, selectedPairs=[], pageIndex=0, selectedName=null, selectedPicture=null;
-let matched=new Set(), lives=3, pageErrors=0, pageLocked=false;
+let matched=new Set(), lives=3, pageErrors=0, sectionErrors = 0, pageLocked=false;
 let pageErrors = 0;
 let sectionErrors = 0;
 let pageLocked = false;
@@ -102,6 +102,7 @@ function renderMenu(){
 }
 function startSection(key){
   currentSection=sections[key];
+  sectionErrors = 0;
   if(currentSection.pairs.length<16){console.error("В разделе недостаточно пар:",key);return;}
   selectedPairs=shuffle(currentSection.pairs).slice(0,16);pageIndex=0;
   startScreen.classList.add("hidden");menuScreen.classList.add("hidden");resultsScreen.classList.add("hidden");gameScreen.classList.remove("hidden");
@@ -150,8 +151,16 @@ function checkPair(){
     nextBtn.textContent = pageIndex === 3 ? "Результаты" : "Далее";
  }
   }else{
-    pageErrors++;nameCard.classList.add("wrong");pictureCard.classList.add("wrong");lives--;livesEl.textContent=lives;statusEl.textContent="Не совпадает";
-    setTimeout(()=>{nameCard.classList.remove("wrong");pictureCard.classList.remove("wrong");statusEl.textContent="";},550);
+    pageErrors++;
+    sectionErrors++;
+    nameCard.classList.add("wrong");
+    pictureCard.classList.add("wrong");
+    lives--;
+    livesEl.textContent=lives;
+    statusEl.textContent="Не совпадает";
+    setTimeout(()=>{nameCard.classList.remove("wrong");
+    pictureCard.classList.remove("wrong");
+    statusEl.textContent="";},550);
     if(lives<=0){pageLocked=true;statusEl.textContent="Жизни закончились — страница начнётся заново";setTimeout(resetPage,900);}
   }
   selectedName=null;selectedPicture=null;updateProgress();
