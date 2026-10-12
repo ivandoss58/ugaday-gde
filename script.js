@@ -73,9 +73,7 @@ const backBtn=document.getElementById("backBtn");
 const resultsTitle=document.getElementById("resultsTitle");
 const resultsMessage=document.getElementById("resultsMessage");
 const resultsEyebrow=document.getElementById("resultsEyebrow");
-const resultPairs=document.getElementById("resultPairs");
 const resultErrors=document.getElementById("resultErrors");
-const resultPage=document.getElementById("resultPage");
 const resultsNextBtn=document.getElementById("resultsNextBtn");
 const resultsMenuBtn=document.getElementById("resultsMenuBtn");
 
@@ -183,9 +181,7 @@ function showResults(){
     : "ОТЛИЧНАЯ РАБОТА!";
   resultsTitle.textContent = "Карточка пройдена!";
   resultsMessage.textContent = "Ты прошел всю карточку!";
-  resultPairs.textContent = "16 из 16";
   resultErrors.textContent = String(sectionErrors);
-  resultPage.textContent = "4 из 4";
 }
 function updateProgress(){const total=pageIndex*4+matched.size;progressFill.style.width=`${(total/16)*100}%`;}
 
