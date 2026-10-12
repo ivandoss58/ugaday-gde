@@ -159,7 +159,7 @@ function showResults(){
   const lastPage=pageIndex===3;
   resultsEyebrow.textContent=pageErrors===0?"БЕЗ ОШИБОК!":"ОТЛИЧНАЯ РАБОТА!";
   resultsTitle.textContent = "Карточка пройдена!";
-  resultsMessage.textContent = "Ты завершил весь раздел!";
+  resultsMessage.textContent = "Ты прошел всю карточку!";
   resultPairs.textContent = "16 из 16";
   resultErrors.textContent = String(sectionErrors);
   resultPage.textContent = "4 из 4";
