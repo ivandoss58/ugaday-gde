@@ -162,8 +162,21 @@ function showResults(){
 function updateProgress(){const total=pageIndex*4+matched.size;progressFill.style.width=`${(total/16)*100}%`;}
 
 playBtn.addEventListener("click",showMenu);
-nextBtn.addEventListener("click",()=>{if(matched.size!==4)return;if(pageIndex<3){pageIndex++;resetPage();}else{showMenu();}});
+nextBtn.addEventListener("click", () => {
+  if (matched.size !== 4 || !pageLocked) return;
+  if (pageIndex < 3) {
+  pageIndex++;
+  resetPage();
+  } else {
+        showResults();
+  }
+});
 backBtn.addEventListener("click",showMenu);
-resultsNextBtn.addEventListener("click",()=>{if(pageIndex<3){pageIndex++;resultsScreen.classList.add("hidden");gameScreen.classList.remove("hidden");resetPage();}else{showMenu();}});
+resultsNextBtn.addEventListener("click",()=>{
+if(pageIndex<3){pageIndex++;
+resultsScreen.classList.add("hidden");
+gameScreen.classList.remove("hidden");resetPage();}else{showMenu();
+  }
+});
 resultsMenuBtn.addEventListener("click",showMenu);
 renderMenu();showStart();
