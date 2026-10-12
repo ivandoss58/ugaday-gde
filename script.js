@@ -141,7 +141,11 @@ function checkPair(){
     matched.add(nameCard.dataset.id);nameCard.classList.add("correct","locked");pictureCard.classList.add("correct","locked");
     nameCard.disabled=true;pictureCard.disabled=true;
     statusEl.textContent=matched.size===4?(pageIndex===3?"Раздел пройден":"Все 4 пары найдены"):"Пара найдена";
-    if(matched.size===4){nextBtn.disabled=false;pageLocked=true;setTimeout(showResults,350);}
+    if (matched.size === 4) {
+    nextBtn.disabled = false;
+    pageLocked = true;
+    nextBtn.textContent = pageIndex === 3 ? "Результаты" : "Далее";
+ }
   }else{
     pageErrors++;nameCard.classList.add("wrong");pictureCard.classList.add("wrong");lives--;livesEl.textContent=lives;statusEl.textContent="Не совпадает";
     setTimeout(()=>{nameCard.classList.remove("wrong");pictureCard.classList.remove("wrong");statusEl.textContent="";},550);
