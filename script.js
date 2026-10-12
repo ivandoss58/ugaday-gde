@@ -202,11 +202,12 @@ nextBtn.addEventListener("click", () => {
   }
 });
 backBtn.addEventListener("click",showMenu);
-resultsNextBtn.addEventListener("click",()=>{
-if(pageIndex<3){pageIndex++;
-resultsScreen.classList.add("hidden");
-gameScreen.classList.remove("hidden");resetPage();}else{showMenu();
-  }
+resultsNextBtn.addEventListener("click", () => {
+  startSection(
+    Object.keys(sections).find(
+      key => sections[key] === currentSection
+    )
+  );
 });
 resultsMenuBtn.addEventListener("click",showMenu);
 renderMenu();showStart();
