@@ -5,7 +5,7 @@
  */
 const sections = {
   mushrooms: {
-    title: "ГРИБЫ", subtitle: "Соедини название с изображением",
+    title: "Карточка № 1. ГРИБЫ", subtitle: "Соедини название с изображением",
     description: "16 грибов • 4 страницы",
     pairs: [
       ["podberiozovik","Подберёзовик","images/mashrooms/podberiozovik.jpeg"],
@@ -24,6 +24,28 @@ const sections = {
       ["lozhnyopionok","Ложный опёнок (ядовит)","images/mashrooms/lozhnyopionok.jpeg"],
       ["poddubovik","Поддубовик","images/mashrooms/poddubovik.jpeg"],
       ["poganka","Бледная поганка (ядовита)","images/mashrooms/poganka.jpeg"]
+    ]
+  },
+  trees: {
+    title: "Карточка № 2. ДЕРЕВЬЯ", subtitle: "Соедини название с изображением",
+    description: "16 деревьев • 4 страницы",
+    pairs: [
+      ["berioza","Берёза","images/mashrooms/berioza.jpg"],
+      ["dub","Дуб","images/mashrooms/dub.jpg"],
+      ["sosna","Сосна","images/mashrooms/sosna.jpg"],
+      ["osina","Осина","images/mashrooms/osina.jpg"],
+      ["klion","Клён","images/mashrooms/klion.jpg"],
+      ["riabina","Рябина","images/mashrooms/riabina.jpg"],
+      ["olha","Ольха","images/mashrooms/olha.jpg"],
+      ["iva","Ива","images/mashrooms/iva.jpg"],
+      ["lipa","Липа","images/mashrooms/lipa.jpg"],
+      ["iasen","Ясень","images/mashrooms/iasen.jpg"],
+      ["oreshnik","Орешник","images/mashrooms/oreshnik.jpg"],
+      ["boiaryshnik","Боярышник","images/mashrooms/boiaryshnik.jpg"],
+      ["viaz","Вяз","images/mashrooms/viaz.jpg"],
+      ["cheriomuha","Черёмуха","images/mashrooms/cheriomuha.jpg"],
+      ["el","Ель","images/mashrooms/el.jpg"],
+      ["kashtan","Каштан","images/mashrooms/kashtan.jpg"]
     ]
   },
   sea_animals: {
