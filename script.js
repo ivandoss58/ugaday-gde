@@ -49,7 +49,7 @@ const sections = {
     ]
   },
   sea_animals: {
-    title: "ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ", subtitle: "Соедини название с изображением",
+    title: "Карточка № 8. ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ", subtitle: "Соедини название с изображением",
     description: "20 животных • 4 страницы",
     pairs: [
       ["antur","Антур","images/sea_animales/Антур.jpeg"],
