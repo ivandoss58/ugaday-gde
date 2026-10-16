@@ -48,6 +48,28 @@ const sections = {
       ["kashtan","Каштан","images/trees/kashtan.jpg"]
     ]
   },
+  medicinal_plants: {
+    title: "Карточка № 3. ЛЕКАРСТВЕННЫЕ РАСТЕНИЯ", subtitle: "Соедини название с изображением",
+    description: "16 растений • 4 страницы",
+    pairs: [
+      ["fialka","Фиалка трёхлистная","images/plants/fialka.jpg"],
+      ["landysh","Ландыш","images/plants/landysh.jpg"],
+      ["chernika","Черника","images/plants/chernika.jpg"],
+      ["romashka","Ромашка лекарственная","images/plants/romashka.jpg"],
+      ["zemlianika","Земляника","images/plants/zemlianika.jpg"],
+      ["cykory","Цикорий","images/plants/cykory.jpg"],
+      ["kalendula","Календула","images/plants/kalendula.jpg"],
+      ["pervocvet","Первоцвет","images/plants/pervocvet.jpg"],
+      ["podorozhnik","Подорожник","images/plants/podorozhnik.jpg"],
+      ["fizalis","Физалис","images/plants/fizalis.jpg"],
+      ["oduvanchik","Одуванчик","images/plants/oduvanchik.jpg"],
+      ["shipovnik","Шиповник","images/plants/shipovnik.jpg"],
+      ["pizhma","Пижма","images/plants/pizhma.jpg"],
+      ["krapiva","Крапива","images/plants/krapiva.jpg"],
+      ["malina","Малина","images/plants/malina.jpg"],
+      ["medunica","Медуница","images/plants/medunica.jpg"]
+    ]
+  },
   sea_animals: {
     title: "Карточка № 8. ЖИВОТНЫЙ МИР МОРЕЙ И ОКЕАНОВ", subtitle: "Соедини название с изображением",
     description: "20 животных • 4 страницы",
